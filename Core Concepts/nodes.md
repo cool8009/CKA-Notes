@@ -1,0 +1,7 @@
+---
+tags:
+  - nodes
+aliases:
+  - node
+---
+

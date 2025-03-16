@@ -2,7 +2,7 @@
 - Within a cluster, every POD can reach every other POD.
 - This is accomplished by deploying a [[POD]] networking solution. This is a virtual network that spans across all nodes in the cluster to which all the pods connect.
 - Through this network, they're able to communicate.
-- There are many solution available for that.
+- There are many solutions available for that.
 - For example, a web app deployed on a node and a DB deployed on a different node. They can reach each other by using the IP of the POD.
 - There is though, **no guarantee** that the IP won't change. 
 - Therefore, a better way to expose the database is to use a service, let's call it **db**.
