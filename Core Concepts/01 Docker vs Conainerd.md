@@ -26,7 +26,7 @@ tags:
 - **crictl** is a cli used to interact with CRI compatible runtimes. 
   ![[Pasted image 20250125160747.png]]
   
-- Since it's aware of [[Certified Kubernetes Administrator/Core Concepts/POD]], as opposed to docker, crictl is the go to solution to debug and view containers running in K8s.
+- Since it's aware of [[10 POD]], as opposed to docker, crictl is the go to solution to debug and view containers running in K8s.
 
 
   ``

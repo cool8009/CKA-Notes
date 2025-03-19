@@ -1,6 +1,9 @@
 ---
 tags:
   - Controlplane
+aliases:
+  - etcd
+  - ETCD
 ---
 
 - is a KV store
@@ -15,26 +18,26 @@ tags:
 	3. **Run ETCD Service**
 	`./etcd`
 - It starts a svc that listening on port 2379 by default.
-- Comes with a [[etcdctl]] client:
+- Comes with a [[03 etcdctl]] client:
   `etcdctl set key1 value1`
   `etcdctl view key1`
 - There are different releases and versions of etcd. Between v2 and v3 there were some command changes.
 - etcd is **not** only for k8s. It's a KV store that is used also in k8s.
 - It stores a bunch of info about different things such as:
-  - [[nodes]]
-  - [[Certified Kubernetes Administrator/Core Concepts/POD]]s
+  - [[14 nodes]]
+  - [[10 POD]]s
   - [[Configs]]
   - [[Secrets]]
   - [[Accounts]]
   - [[Roles]]
   - [[Binding]]
   - and more
-- Every change you make to a cluster are updated on the [[etcd]] server.
+- Every change you make to a cluster are updated on the [[02 ETCD]] server.
 - Only once it is updated, change is considered complete.
-- Depending on your setup, from scratch or with [[kubeadm]], [[etcd]] is deployed differently.
-- If you deploy from scratch, you download and install [[etcd]] by yourself, and configure it.
+- Depending on your setup, from scratch or with [[kubeadm]], [[02 ETCD]] is deployed differently.
+- If you deploy from scratch, you download and install [[02 ETCD]] by yourself, and configure it.
 - [[kubeadm]] deploys etcd as a pod in the kube-system [[namespace]]. 
-- the `--advertise-client-urls` option in `etcd.service` is where [[etcd]] is listening on. This is the url you later set up on your worker nodes.
+- the `--advertise-client-urls` option in `etcd.service` is where [[02 ETCD]] is listening on. This is the url you later set up on your worker nodes.
 - etcd stores k8s data in a specific structure:
   ![[Pasted image 20250125162609.png]]
 - In a HA environment, because you have multiple master nodes and therefore multiple etcd clusters, you need to specify the `--initial-cluster controller-0={urltocontroller0}:2380 {urltocontroller1}:2380` in `etcd.service`

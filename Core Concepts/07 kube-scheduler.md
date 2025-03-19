@@ -1,10 +1,13 @@
 ---
 tags:
   - Controlplane
+aliases:
+  - kube-scheduler
+  - scheduler
 ---
 
-- Scheduler is responsible **only** on deciding which POD goes on which [[nodes]]. 
-- It doesn't actually place them there, that's the job of the [[kubelet]].
+- Scheduler is responsible **only** on deciding which POD goes on which [[14 nodes]]. 
+- It doesn't actually place them there, that's the job of the [[08 kubelet]].
 - You need a scheduler to make sure that the right container ends up on the right ship (node), with regard to capacity, performance, policy etc.
 - The scheduler looks at each pod and tries to find the best node for it in 2 phases:
 	  - **Filtering** nodes that don't fit the requirements of the pod.

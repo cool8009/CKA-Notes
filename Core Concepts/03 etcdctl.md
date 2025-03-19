@@ -2,9 +2,11 @@
 tags:
   - Controlplane
   - clitools
+aliases:
+  - etcdctl
 ---
 
-**ETCDCTL is the CLI tool used to interact with [[ETCD]].ETCDCTL can interact with [[ETCD]] Server using 2 API versions – Version 2 and Version 3. By default it’s set to use Version 2. Each version has different sets of commands.
+**ETCDCTL is the CLI tool used to interact with [[02 ETCD]].ETCDCTL can interact with [[02 ETCD]] Server using 2 API versions – Version 2 and Version 3. By default it’s set to use Version 2. Each version has different sets of commands.
 
 For example, ETCDCTL version 2 supports the following commands:
 
