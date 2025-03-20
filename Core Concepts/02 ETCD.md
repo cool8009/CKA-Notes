@@ -24,7 +24,7 @@ aliases:
 - There are different releases and versions of etcd. Between v2 and v3 there were some command changes.
 - etcd is **not** only for k8s. It's a KV store that is used also in k8s.
 - It stores a bunch of info about different things such as:
-  - [[14 nodes]]
+  - [[20 nodes]]
   - [[10 POD]]s
   - [[Configs]]
   - [[Secrets]]

@@ -18,7 +18,7 @@ tags:
 - This is the simplest example:
 	![[Pasted image 20250316105459.png]]
 - A single instance of my application, inside a container, inside a pod, inside a single node K8s cluster.
-- What if we need to scale up for new users of our app? Where do we create an additional container? We don't create it in the same POD, as a POD is a single application. Instead, we create a new POD in the [[14 nodes]], or a new node entirely:
+- What if we need to scale up for new users of our app? Where do we create an additional container? We don't create it in the same POD, as a POD is a single application. Instead, we create a new POD in the [[20 nodes]], or a new node entirely:
 - ![[Pasted image 20250316110356.png]]
 - PODs usually have a 1:1 relationship with the containers. 
 - **Multi container PODs** are possible, just usually it's not for containers of the same kind. If our intention is to scale our application, then putting 2 of the same app in one POD is not the way to go.

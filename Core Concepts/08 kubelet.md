@@ -6,7 +6,7 @@ aliases:
   - kubelet
 ---
 
-- Like the captain, leads all activities on the [[13 worker node]]
+- Like the captain, leads all activities on the [[22 worker node]]
 - Load or unload containers on the ship (node)
 - Sole point of contact on the node, as instructed by the [[07 kube-scheduler]]
 - Send back status reports at regular intervals

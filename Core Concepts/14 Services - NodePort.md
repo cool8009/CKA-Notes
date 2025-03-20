@@ -8,6 +8,9 @@ aliases:
   - services
   - Services
   - Service
+  - NodePort
+  - nodeport
+  - nodeports
 ---
 - Enable comms between various components within or outside the application.
 - Helps us connect apps together with other apps or users.
@@ -48,5 +51,36 @@ spec:
 	  - targetPort: 80 #list/array 
 		port: 80
 		nodePort: 30008
-		
-	```
+```
+
+- If you don't provide a `targetPort`, it's assumed to be the same as `port`.
+- If you don't provide a `nodePort`, a free port in the range 30000 - 32767 will be selected.
+- You can have multiple such mappings within a single service.
+- One thing is missing. We specified a targetPort, but didn't tell it which POD is the target. There could be infinite PODs with port 80 listening.
+- As we did previously and how do a lot in K8s, we will use **labels and selectors** to link these together in the  `spec`:
+```
+spec:
+	type: NodePort #service type
+	ports:
+	
+	  - targetPort: 80 #list/array 
+		port: 80
+		nodePort: 30008
+	selector:
+		app: myapp
+		type: front-end
+```
+- Use the same selectors from the pod definition file. This links the service to the POD.
+- `kubectl create -f service-def.yaml`
+- `kubectl get services`
+- In a prod environment, you will have multiple PODs running the same application for HA and load balancing. What do you do then?
+- The service automatically selects the amount of PODs relevant, based on the selectors, and forwards requests to them. No additional configuration needed!
+- The algorithm it uses to decide to which POD to forward traffic to, it's random.
+- This makes the NodePort service a built in load balancer:
+	![[Pasted image 20250319200809.png]]
+- If we have our application running on PODs across **different nodes**, K8s automatically creates a service that spans all the nodes in the cluster, **and maps the TargetPort to the same NodePort as all the nodes in the cluster:**
+	- ![[Pasted image 20250319201039.png]]
+- This way, you can access your app using the IP of any node in the cluster, and with the same port number.
+- No matter the cluster configuration, the service is created and behaves exactly the same, without having to do any additional steps during the service creation.
+- When PODs are removed or created, the service adapts automatically.
+- **Once created, you typically won't have to make any additional configuration changes.**
