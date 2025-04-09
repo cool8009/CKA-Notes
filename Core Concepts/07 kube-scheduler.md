@@ -1,6 +1,7 @@
 ---
 tags:
   - Controlplane
+  - scheduling
 aliases:
   - kube-scheduler
   - scheduler
@@ -15,3 +16,4 @@ aliases:
 - To install the scheduler, download the binary, extract and run as a service.
 - Like the previous components, [[kubeadm]] deploys it on the master node.
 - If not, you can find it in the `systemd/system` folder or using `ps -aux | grep kube-scheduler`
+- More info at [[1 Manual Scheduling]]
