@@ -46,4 +46,42 @@ metadata:
 
 - Send it as a JSON format.
 - **The scheduler runs as a POD in the kube-system namespace.**
+- 1. Create a binding object that specifies the target node ("node02"):
+
+    ```
+    apiVersion: v1
+    kind: Binding
+    metadata:
+      name: nginx
+    target:
+      apiVersion: v1
+      kind: Node
+      name: node02
+    ```
+
+2. The original pod definition remains unchanged:
+
+    ```
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: nginx
+      labels:
+        name: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 8080
+    ```
+
+3. Convert the YAML binding to JSON (e.g., save it as `binding.json`) and send a POST request to the pod’s binding API using curl:
+
+    ```
+    curl --header "Content-Type: application/json" --request POST --data @binding.json http://$SERVER/api/v1/namespaces/default/pods/nginx/binding
+    ```
+    
+
+This binding instructs Kubernetes to assign the existing pod to the specified node without altering its original manifest.
 

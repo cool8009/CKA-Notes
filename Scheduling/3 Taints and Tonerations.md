@@ -19,7 +19,7 @@ aliases:
   - First we prevent all PODs from being placed on node 1 by placing a taint on the node.
   - By default pods have **no tolerations**. This means that at this point, no pods will be placed on node 1, as none of them can tolerate the taint.
   - Second, we specify which pods we want to be able to be placed on the tainted node, so we specify a toleration for pod D.
-  - ![[Pasted image 20250409125807.png]]
+  - ![[Pasted image 20250428084106.png]]
   - **Taints are set on nodes. Tolerations are set on [[10 POD]]**
   - Use:
     `kubectl taint nodes node-name key=value:taint-effect`
