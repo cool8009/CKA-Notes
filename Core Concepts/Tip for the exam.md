@@ -56,3 +56,76 @@ In k8s version 1.19+, we can specify the –replicas option to create a deployme
 ```
 kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yaml
 ```
+
+
+## 🧭 Option 1: Full YAML Outline (via `--recursive`)
+
+bash
+
+CopyEdit
+
+`kubectl explain deployment --recursive | less`
+
+🔍 Shows the **entire field hierarchy** — from top to bottom — so you can see:
+
+- What goes where
+    
+- What fields exist (and which ones don’t!)
+    
+- How to structure your YAML properly
+    
+
+---
+
+## 🧠 Option 2: Deep Dive into One Field
+
+bash
+
+CopyEdit
+
+`kubectl explain deployment.spec.template`
+
+🔍 Gives you a **description** of that specific field — usually tells you:
+
+- What it's used for
+    
+- Whether it's optional or required
+    
+- Its substructure
+    
+
+You can go as deep as:
+
+bash
+
+CopyEdit
+
+`kubectl explain deployment.spec.template.spec.containers`
+
+---
+
+### 🎯 Use case in exam:
+
+You're staring at a YAML question and forget how to nest `volumeMounts`?
+
+Boom:
+
+bash
+
+CopyEdit
+
+`kubectl explain pod.spec.containers.volumeMounts`
+
+You forget whether to use `matchLabels` or `matchExpressions` in a selector?
+
+Boom:
+
+bash
+
+CopyEdit
+
+`kubectl explain deployment.spec.selector`
+
+---
+
+This is _the_ CLI-native way to debug YAML field-by-field — no browser needed.
