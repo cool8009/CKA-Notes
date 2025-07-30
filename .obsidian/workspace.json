@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Core Concepts/Tip for the exam.md",
+                "file": "Scheduling/4 Node Selectors.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tip for the exam"
+              "title": "4 Node Selectors"
             }
           }
         ],
@@ -185,6 +185,19 @@
   },
   "active": "246a82c74d326f24",
   "lastOpenFiles": [
+    "Scheduling/5 Node Affinity.md",
+    "Scheduling/6 Node Affinity vs Taints and Tolerations.md",
+    "Scheduling/4 Node Selectors.md",
+    "Scheduling/3 Taints and Tonerations.md",
+    "Core Concepts/Tip for the exam.md",
+    "Scheduling/2 Labels and Selectors.md",
+    "Scheduling/Images/Pasted image 20250730222700.png",
+    "Core Concepts/13 Deployments.md",
+    "Scheduling/1 Manual Scheduling.md",
+    "Core Concepts/Untitled 1.md",
+    "Core Concepts/Untitled.md",
+    "Core Concepts/07 kube-scheduler.md",
+    "Core Concepts/09 kube-proxy.md",
     "aim routine.md",
     "Scheduling/Editing Pods and Deployments.md",
     "Scheduling/7 Resource Limits.md",
@@ -193,21 +206,12 @@
     "Scheduling/Images/Pasted image 20250507221001.png",
     "Scheduling/Images/Pasted image 20250507220956.png",
     "Scheduling/Images/Pasted image 20250507215022.png",
-    "Scheduling/6 Node Affinity vs Taints and Tolerations.md",
     "Scheduling/Images/Pasted image 20250507214314.png",
-    "Scheduling/5 Node Affinity.md",
-    "Scheduling/4 Node Selectors.md",
-    "Core Concepts/Tip for the exam.md",
     "Core Concepts/22 worker node.md",
-    "Core Concepts/13 Deployments.md",
-    "Scheduling/1 Manual Scheduling.md",
     "Scheduling/Images/Pasted image 20250504231418.jpg",
     "Scheduling/Images/Pasted image 20250504231323.png",
     "Scheduling/Images/Pasted image 20250504230953.jpg",
-    "Scheduling/Images/Pasted image 20250504225833.jpg",
     "Node Selectors.md",
-    "Scheduling/3 Taints and Tonerations.md",
-    "Scheduling/2 Labels and Selectors.md",
     "Core Concepts/17 Namespaces.md",
     "Core Concepts/10 POD.md"
   ]

@@ -129,3 +129,10 @@ CopyEdit
 ---
 
 This is _the_ CLI-native way to debug YAML field-by-field — no browser needed.
+
+
+
+**Replacing pods:**
+- Lets say your scheduler is down, and you wanna manually schedule a pod to a node. You need to delete and recreate the pod with the new pod definition file. you can use **kubectl delete**, or:
+	`kubectl replace --force -f pod.yaml `
+	this will ensure it will indeed delete and not give some bullshit about can't delete if nodeName prop is set.

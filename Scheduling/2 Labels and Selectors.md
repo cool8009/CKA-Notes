@@ -40,3 +40,14 @@ spec:
 - If you require more granular control for selecting Pods, you can list multiple labels in the `matchLabels` section.
 - **Annotations** also exist. While labels and selectors are used for grouping and filtering, annotations are used to record other details for informatory purposes.
 - Things like name, version, build version, contact info, whatever else you want. These also go under `metadata`
+
+
+
+- To find pods or any other resource based on selectors, use:
+  `kubectl get pods --selector env=dev`
+- Then you can also do a **wordcount** which is a linux util that will count words or lines (with the -l flag):
+  `kubectl get pods --selector env=dev | wc -l`
+- But because the output will contain a header to the table as well, we need to get rid of the header:
+  ![[Pasted image 20250730222700.png]]
+- So we can use:
+  `kubectl get pods --selector env=dev --no-headers | wc -l`
