@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scheduling/11 Priority Classes.md",
+                "file": "Scheduling/12 Multiple Schedulers.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "11 Priority Classes"
+              "title": "12 Multiple Schedulers"
             }
           }
         ],
@@ -225,16 +225,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4fac80966a49d4f2",
+  "active": "eef29759f58d2062",
   "lastOpenFiles": [
+    "Scheduling/Images/Pasted image 20250826083722.png",
+    "Scheduling/11 Priority Classes.md",
+    "Scheduling/12 Multiple Schedulers.md",
+    "Scheduling/Tip - Owner check.md",
+    "Core Concepts/Tip for the exam.md",
     "Scheduling/Images/Pasted image 20250825090530.png",
     "Scheduling/Images/Pasted image 20250825085931.png",
     "Scheduling/10 Static Pods.md",
-    "Scheduling/11 Priority Classes.md",
     "Scheduling/Tip - Running a pod with args.md",
-    "Scheduling/Tip - Owner check.md",
     "Scheduling/9 Editing Pods and Deployments.md",
-    "Core Concepts/Tip for the exam.md",
     "Scheduling/Images/Pasted image 20250824094353.png",
     "Scheduling/5 Node Affinity.md",
     "Scheduling/8 DaemonSets.md",
@@ -257,7 +259,6 @@
     "Scheduling/Images/Pasted image 20250507221801.png",
     "Scheduling/Images/Pasted image 20250507215615.png",
     "Scheduling/Images/Pasted image 20250507221001.png",
-    "Scheduling/Images/Pasted image 20250507220956.png",
     "Core Concepts/22 worker node.md",
     "Node Selectors.md",
     "Core Concepts/17 Namespaces.md",
