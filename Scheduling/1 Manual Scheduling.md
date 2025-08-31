@@ -22,7 +22,7 @@ aliases:
 		   image: nginx
 		   ports:
 		     - containerPort: 8080
-	nodeName:
+		nodeName:
 ```
 - If you don't specify this field, K8s will add it automatically.
 - The scheduler looks through all the PODs, and looks for those that don't have this property set.
