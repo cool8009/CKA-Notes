@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Core Concepts/Tip for the exam.md",
+                "file": "Scheduling/14 Admissions Controllers (new 2025).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tip for the exam"
+              "title": "14 Admissions Controllers (new 2025)"
             }
           }
         ]
@@ -169,24 +169,31 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "eef29759f58d2062",
+  "active": "4fac80966a49d4f2",
   "lastOpenFiles": [
-    "Scheduling/2 Labels and Selectors.md",
-    "Scheduling/1 Manual Scheduling.md",
-    "Scheduling/11 Priority Classes.md",
-    "Scheduling/10 Static Pods.md",
+    "Scheduling/Images/Pasted image 20250922154724.png",
+    "Scheduling/Images/Pasted image 20250922154552.png",
+    "Scheduling/Images/Pasted image 20250922154351.png",
+    "Scheduling/13 Configuring Scheduler Profiles.md",
+    "Scheduling/14 Admissions Controllers (new 2025).md",
+    "Scheduling/Images/Pasted image 20250922151859.png",
     "Scheduling/12 Multiple Schedulers.md",
+    "Scheduling/11 Priority Classes.md",
+    "Scheduling/1 Manual Scheduling.md",
+    "Scheduling/9 Editing Pods and Deployments.md",
+    "Scheduling/10 Static Pods.md",
+    "Scheduling.zip",
+    "Scheduling/8 DaemonSets.md",
+    "Scheduling/7 Resource Limits.md",
+    "Core Concepts/Tip for the exam.md",
+    "Scheduling/5 Node Affinity.md",
+    "Scheduling/2 Labels and Selectors.md",
     "Scheduling/Images/Pasted image 20250826083722.png",
     "Scheduling/Tip - Owner check.md",
-    "Core Concepts/Tip for the exam.md",
     "Scheduling/Images/Pasted image 20250825090530.png",
     "Scheduling/Images/Pasted image 20250825085931.png",
     "Scheduling/Tip - Running a pod with args.md",
-    "Scheduling/9 Editing Pods and Deployments.md",
     "Scheduling/Images/Pasted image 20250824094353.png",
-    "Scheduling/5 Node Affinity.md",
-    "Scheduling/8 DaemonSets.md",
-    "Scheduling/7 Resource Limits.md",
     "Scheduling/4 Node Selectors.md",
     "Scheduling/3 Taints and Tonerations.md",
     "Scheduling/6 Node Affinity vs Taints and Tolerations.md",
@@ -196,15 +203,10 @@
     "Core Concepts/Untitled.md",
     "Core Concepts/Untitled 1.md",
     "aim routine.md",
-    "Scheduling/Images/Pasted image 20250730222700.png",
     "Core Concepts/13 Deployments.md",
     "Core Concepts/07 kube-scheduler.md",
     "Core Concepts/09 kube-proxy.md",
-    "Scheduling/Images/Pasted image 20250507221801.png",
-    "Scheduling/Images/Pasted image 20250507215615.png",
     "Core Concepts/22 worker node.md",
-    "Node Selectors.md",
-    "Core Concepts/17 Namespaces.md",
-    "Core Concepts/10 POD.md"
+    "Node Selectors.md"
   ]
 }
