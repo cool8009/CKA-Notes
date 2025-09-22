@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "14 Admissions Controllers (new 2025)"
             }
+          },
+          {
+            "id": "a1deef5d20f421a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Scheduling/15 Validating Admission Controllers (new 2025).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "15 Validating Admission Controllers (new 2025)"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -171,11 +186,16 @@
   },
   "active": "4fac80966a49d4f2",
   "lastOpenFiles": [
+    "Scheduling/Images/Pasted image 20250922172232.png",
+    "Scheduling/Images/Pasted image 20250922171347.png",
+    "Scheduling/Images/Pasted image 20250922170847.png",
+    "Scheduling/Images/Pasted image 20250922170641.png",
+    "Scheduling/14 Admissions Controllers (new 2025).md",
+    "Scheduling/15 Validating Admission Controllers (new 2025).md",
     "Scheduling/Images/Pasted image 20250922154724.png",
     "Scheduling/Images/Pasted image 20250922154552.png",
     "Scheduling/Images/Pasted image 20250922154351.png",
     "Scheduling/13 Configuring Scheduler Profiles.md",
-    "Scheduling/14 Admissions Controllers (new 2025).md",
     "Scheduling/Images/Pasted image 20250922151859.png",
     "Scheduling/12 Multiple Schedulers.md",
     "Scheduling/11 Priority Classes.md",
@@ -193,20 +213,15 @@
     "Scheduling/Images/Pasted image 20250825090530.png",
     "Scheduling/Images/Pasted image 20250825085931.png",
     "Scheduling/Tip - Running a pod with args.md",
-    "Scheduling/Images/Pasted image 20250824094353.png",
     "Scheduling/4 Node Selectors.md",
     "Scheduling/3 Taints and Tonerations.md",
     "Scheduling/6 Node Affinity vs Taints and Tolerations.md",
-    "Scheduling/Images/Pasted image 20250805225519.png",
-    "Scheduling/Images/Pasted image 20250805225359.png",
-    "Scheduling/Images/Pasted image 20250805225244.png",
     "Core Concepts/Untitled.md",
     "Core Concepts/Untitled 1.md",
     "aim routine.md",
     "Core Concepts/13 Deployments.md",
     "Core Concepts/07 kube-scheduler.md",
     "Core Concepts/09 kube-proxy.md",
-    "Core Concepts/22 worker node.md",
-    "Node Selectors.md"
+    "Core Concepts/22 worker node.md"
   ]
 }
