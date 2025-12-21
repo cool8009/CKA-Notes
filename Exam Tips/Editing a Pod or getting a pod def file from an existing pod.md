@@ -1,0 +1,3 @@
+- `kubectl edit pod podname`
+- We might not be able to save, cause it wont let us edit a living pod, but a copy of our changes will be saved and location will printed to the console. we can use that to spin up a new one
+- then
