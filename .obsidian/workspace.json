@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04 Application Lifecycle Management/3 Commands and Arguments in Kubernetes.md",
+                "file": "04 Application Lifecycle Management/13 Vertical Pod Autoscaler.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "3 Commands and Arguments in Kubernetes"
+              "title": "13 Vertical Pod Autoscaler"
             }
           }
         ],
@@ -200,35 +200,37 @@
   },
   "active": "f4b5864f2d752c9b",
   "lastOpenFiles": [
-    "04 Application Lifecycle Management/2 Commands and Arguments in Docker.md",
-    "04 Application Lifecycle Management/3 Commands and Arguments in Kubernetes.md",
-    "03 Logging and Monitoring/2 Managing Application Logs.md",
+    "04 Application Lifecycle Management/11 Horizontal Pod Autoscaler.md",
+    "04 Application Lifecycle Management/10 Introduction To Autoscaling (2025 Updates).md",
+    "04 Application Lifecycle Management/12 In Place Pod Resizing.md",
+    "04 Application Lifecycle Management/13 Vertical Pod Autoscaler.md",
+    "04 Application Lifecycle Management/Images/aim routine.md",
+    "04 Application Lifecycle Management/14 Horizontal Pod Autoscaler 1 1.md",
+    "Pasted image 20251223220506.png",
     "04 Application Lifecycle Management/8 Multi Container Pods.md",
-    "04 Application Lifecycle Management/5 Configure ConfigMaps in Applications.md",
     "04 Application Lifecycle Management/9 Multi-Container Pods Design Patterns.md",
+    "Exam Tips/Tip - Running a pod with args.md",
+    "04 Application Lifecycle Management/3 Commands and Arguments in Kubernetes.md",
+    "04 Application Lifecycle Management/4 Configure Environment Variables in Applications.md",
+    "04 Application Lifecycle Management/2 Commands and Arguments in Docker.md",
+    "Exam Tips/Editing a Pod or getting a pod def file from an existing pod.md",
+    "04 Application Lifecycle Management/1 Rolling Updates and Rollbacks.md",
+    "03 Logging and Monitoring/2 Managing Application Logs.md",
+    "04 Application Lifecycle Management/5 Configure ConfigMaps in Applications.md",
     "04 Application Lifecycle Management/Images/Pasted image 20251201221748.png",
-    "04 Application Lifecycle Management/11 Multi Container Pods 1 1 1.md",
-    "04 Application Lifecycle Management/10 Multi Container Pods 1 1.md",
     "04 Application Lifecycle Management/Images/Pasted image 20251201220959.png",
     "04 Application Lifecycle Management/7 Encrypting Secret Data at Rest.md",
     "04 Application Lifecycle Management/6 Secrets.md",
     "04 Application Lifecycle Management/Images/Pasted image 20251130230434.png",
     "Exam Tips/replacing an existing pod.md",
-    "Exam Tips/Editing a Pod or getting a pod def file from an existing pod.md",
-    "Exam Tips/Tip - Running a pod with args.md",
     "Exam Tips/Tip - Owner check.md",
     "Exam Tips",
-    "04 Application Lifecycle Management/4 Configure Environment Variables in Applications.md",
     "01 Core Concepts/Untitled 1.md",
     "Exam Tips/Tip for the exam.md",
     "01 Core Concepts/Untitled.md",
     "01 Core Concepts/22 worker node.md",
     "01 Core Concepts/21 1Untitled.md",
-    "04 Application Lifecycle Management/1 Rolling Updates and Rollbacks.md",
     "03 Logging and Monitoring/1 Monitoring Kubernetes Cluster Components.md",
-    "02 Scheduling/15 Validating Admission Controllers (new 2025).md",
-    "02 Scheduling/14 Admissions Controllers (new 2025).md",
-    "02 Scheduling/13 Configuring Scheduler Profiles.md",
     "04 Application Lifecycle Management/Images/Pasted image 20251005092639.png",
     "04 Application Lifecycle Management/Images/Pasted image 20251005092046.png",
     "04 Application Lifecycle Management/Images/Pasted image 20251005092019.png",
@@ -239,7 +241,6 @@
     "03 Logging and Monitoring",
     "02 Scheduling/Images/Pasted image 20250922172232.png",
     "02 Scheduling/Images/Pasted image 20250922171347.png",
-    "02 Scheduling/Images/Pasted image 20250922170847.png",
     "Scheduling.zip"
   ]
 }
