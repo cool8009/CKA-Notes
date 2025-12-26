@@ -110,9 +110,7 @@ You're staring at a YAML question and forget how to nest `volumeMounts`?
 
 Boom:
 
-bash
 
-CopyEdit
 
 `kubectl explain pod.spec.containers.volumeMounts`
 
@@ -120,9 +118,7 @@ You forget whether to use `matchLabels` or `matchExpressions` in a selector?
 
 Boom:
 
-bash
 
-CopyEdit
 
 `kubectl explain deployment.spec.selector`
 
@@ -136,3 +132,8 @@ This is _the_ CLI-native way to debug YAML field-by-field — no browser needed.
 - Lets say your scheduler is down, and you wanna manually schedule a pod to a node. You need to delete and recreate the pod with the new pod definition file. you can use **kubectl delete**, or:
 	`kubectl replace --force -f pod.yaml `
 	this will ensure it will indeed delete and not give some bullshit about can't delete if nodeName prop is set.
+
+
+Here's a quick tip. In the exam, you won't know if what you did is correct or not, as in the practice tests in this course.
+
+You must verify your work yourself. For example, if the question is to create a pod with a specific image, you must run the `kubectl describe pod` command to verify the pod is created with the correct name and correct image.

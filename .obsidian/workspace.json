@@ -8,49 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "eef29759f58d2062",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 Scheduling/14 Admissions Controllers (new 2025).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "14 Admissions Controllers (new 2025)"
-            }
-          },
-          {
-            "id": "a1deef5d20f421a2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "04 Application Lifecycle Management/1 Rolling Updates and Rollbacks.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "1 Rolling Updates and Rollbacks"
-            }
-          },
-          {
             "id": "f4b5864f2d752c9b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "04 Application Lifecycle Management/13 Vertical Pod Autoscaler.md",
+                "file": "Exam Tips/Tip for the exam.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "13 Vertical Pod Autoscaler"
+              "title": "Tip for the exam"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -200,13 +171,25 @@
   },
   "active": "f4b5864f2d752c9b",
   "lastOpenFiles": [
+    "05 Cluster Maintenance/04 Cluster Upgrade Process.md",
+    "01 Core Concepts/08 kubelet.md",
+    "05 Cluster Maintenance/images/Pasted image 20251225120847.png",
+    "05 Cluster Maintenance/images/Pasted image 20251223220506.png",
+    "05 Cluster Maintenance/images",
+    "05 Cluster Maintenance/images/Pasted image 20251225115505.png",
+    "05 Cluster Maintenance/03 K8s Releases.md",
+    "05 Cluster Maintenance/02 OS Upgrades.md",
+    "05 Cluster Maintenance/01 Intro.md",
+    "Untitled.base",
+    "05 Cluster Maintenance/06 Intro 1 1 1 1 1.md",
+    "05 Cluster Maintenance/05 Intro 1 1 1 1.md",
+    "04 Application Lifecycle Management/13 Vertical Pod Autoscaler.md",
+    "05 Cluster Maintenance",
     "04 Application Lifecycle Management/11 Horizontal Pod Autoscaler.md",
     "04 Application Lifecycle Management/10 Introduction To Autoscaling (2025 Updates).md",
     "04 Application Lifecycle Management/12 In Place Pod Resizing.md",
-    "04 Application Lifecycle Management/13 Vertical Pod Autoscaler.md",
     "04 Application Lifecycle Management/Images/aim routine.md",
     "04 Application Lifecycle Management/14 Horizontal Pod Autoscaler 1 1.md",
-    "Pasted image 20251223220506.png",
     "04 Application Lifecycle Management/8 Multi Container Pods.md",
     "04 Application Lifecycle Management/9 Multi-Container Pods Design Patterns.md",
     "Exam Tips/Tip - Running a pod with args.md",
@@ -223,14 +206,7 @@
     "04 Application Lifecycle Management/6 Secrets.md",
     "04 Application Lifecycle Management/Images/Pasted image 20251130230434.png",
     "Exam Tips/replacing an existing pod.md",
-    "Exam Tips/Tip - Owner check.md",
     "Exam Tips",
-    "01 Core Concepts/Untitled 1.md",
-    "Exam Tips/Tip for the exam.md",
-    "01 Core Concepts/Untitled.md",
-    "01 Core Concepts/22 worker node.md",
-    "01 Core Concepts/21 1Untitled.md",
-    "03 Logging and Monitoring/1 Monitoring Kubernetes Cluster Components.md",
     "04 Application Lifecycle Management/Images/Pasted image 20251005092639.png",
     "04 Application Lifecycle Management/Images/Pasted image 20251005092046.png",
     "04 Application Lifecycle Management/Images/Pasted image 20251005092019.png",
@@ -239,8 +215,6 @@
     "04 Application Lifecycle Management",
     "Untitled 1",
     "03 Logging and Monitoring",
-    "02 Scheduling/Images/Pasted image 20250922172232.png",
-    "02 Scheduling/Images/Pasted image 20250922171347.png",
     "Scheduling.zip"
   ]
 }
