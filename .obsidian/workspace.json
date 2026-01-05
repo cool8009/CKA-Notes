@@ -11,14 +11,12 @@
             "id": "c49a8e99a5394adc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "06 Security/10 Certificates API.md",
-                "mode": "source",
-                "source": false
+                "file": "06 Security/Images/Pasted image 20260104202802.png"
               },
-              "icon": "lucide-file",
-              "title": "10 Certificates API"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260104202802"
             }
           }
         ]
@@ -169,25 +167,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "c49a8e99a5394adc",
+  "active": "4fac80966a49d4f2",
   "lastOpenFiles": [
+    "06 Security/10 Certificates API.md",
     "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1 1 1 1 1.md",
     "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1 1 1 1.md",
     "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1 1 1.md",
     "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1 1.md",
-    "06 Security/10 Certificates API.md",
     "06 Security/9 View Certificate Lab Solution.md",
     "06 Security/8 View Certificate Details.md",
     "06 Security/7 TLS in K8s - Generating Certificates.md",
     "01 Core Concepts/01 Docker vs Conainerd.md",
     "03 Logging and Monitoring/2 Managing Application Logs.md",
     "03 Logging and Monitoring/1 Monitoring Kubernetes Cluster Components.md",
-    "Pasted image 20260104203306.png",
-    "Pasted image 20260104203144.png",
-    "Pasted image 20260104203048.png",
-    "Pasted image 20260104203007.png",
-    "Pasted image 20260104202914.png",
-    "Pasted image 20260104202802.png",
+    "06 Security/Images/Pasted image 20260104203306.png",
+    "06 Security/Images/Pasted image 20260104203144.png",
+    "06 Security/Images/Pasted image 20260104203048.png",
+    "06 Security/Images/Pasted image 20260104203007.png",
+    "06 Security/Images/Pasted image 20260104202914.png",
+    "06 Security/Images/Pasted image 20260104202802.png",
     "06 Security/Images/Pasted image 20251230231455.png",
     "06 Security/Images/Pasted image 20260104183105.png",
     "06 Security/6 TLS In K8s.md",
