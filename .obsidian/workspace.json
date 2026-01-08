@@ -11,12 +11,14 @@
             "id": "c49a8e99a5394adc",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "06 Security/Images/Pasted image 20260104202802.png"
+                "file": "06 Security/12 API Groups.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260104202802"
+              "icon": "lucide-file",
+              "title": "12 API Groups"
             }
           }
         ]
@@ -167,16 +169,24 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4fac80966a49d4f2",
+  "active": "c49a8e99a5394adc",
   "lastOpenFiles": [
+    "Pasted image 20260106212622.jpg",
+    "Pasted image 20260106212615.jpg",
+    "06 Security/11 KubeConfig.md",
+    "06 Security/Images/Pasted image 20260106191311.png",
+    "06 Security/Images/Pasted image 20260106191625.png",
     "06 Security/10 Certificates API.md",
+    "06 Security/7 TLS in K8s - Generating Certificates.md",
+    "06 Security/5 TLS Basics.md",
+    "06 Security/4 TLS Introduction.md",
+    "06 Security/Images/Pasted image 20260104202802.png",
     "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1 1 1 1 1.md",
     "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1 1 1 1.md",
     "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1 1 1.md",
-    "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1 1.md",
+    "06 Security/12 API Groups.md",
     "06 Security/9 View Certificate Lab Solution.md",
     "06 Security/8 View Certificate Details.md",
-    "06 Security/7 TLS in K8s - Generating Certificates.md",
     "01 Core Concepts/01 Docker vs Conainerd.md",
     "03 Logging and Monitoring/2 Managing Application Logs.md",
     "03 Logging and Monitoring/1 Monitoring Kubernetes Cluster Components.md",
@@ -185,20 +195,13 @@
     "06 Security/Images/Pasted image 20260104203048.png",
     "06 Security/Images/Pasted image 20260104203007.png",
     "06 Security/Images/Pasted image 20260104202914.png",
-    "06 Security/Images/Pasted image 20260104202802.png",
     "06 Security/Images/Pasted image 20251230231455.png",
-    "06 Security/Images/Pasted image 20260104183105.png",
     "06 Security/6 TLS In K8s.md",
     "04 Application Lifecycle Management/8 Multi Container Pods.md",
-    "06 Security/Images/Pasted image 20251230231406.png",
-    "06 Security/5 TLS Basics.md",
-    "06 Security/Images/Pasted image 20251230225507.png",
-    "06 Security/4 TLS Introduction.md",
     "06 Security/3 Authentication.md",
     "06 Security/2 K8s Security Primitives.md",
     "06 Security/1 Security Intro.md",
     "06 Security/Images",
-    "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1.md",
     "05 Cluster Maintenance/05 Backup and Restore Methods.md",
     "06 Security",
     "05 Cluster Maintenance/06 WORKING WITH ETCDCTL & ETCDUTL.md",
@@ -208,7 +211,6 @@
     "01 Core Concepts/08 kubelet.md",
     "05 Cluster Maintenance/images",
     "05 Cluster Maintenance/03 K8s Releases.md",
-    "05 Cluster Maintenance/02 OS Upgrades.md",
     "Untitled.base",
     "05 Cluster Maintenance",
     "Exam Tips",
