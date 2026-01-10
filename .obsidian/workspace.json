@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "06 Security/12 API Groups.md",
+                "file": "06 Security/10 Certificates API.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "12 API Groups"
+              "title": "10 Certificates API"
             }
           }
         ]
@@ -171,6 +171,7 @@
   },
   "active": "c49a8e99a5394adc",
   "lastOpenFiles": [
+    "06 Security/12 API Groups.md",
     "Pasted image 20260106212622.jpg",
     "Pasted image 20260106212615.jpg",
     "06 Security/11 KubeConfig.md",
@@ -184,7 +185,6 @@
     "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1 1 1 1 1.md",
     "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1 1 1 1.md",
     "06 Security/11 Security Intro 1 1 1 1 1 1 1 1 1 1 1 1.md",
-    "06 Security/12 API Groups.md",
     "06 Security/9 View Certificate Lab Solution.md",
     "06 Security/8 View Certificate Details.md",
     "01 Core Concepts/01 Docker vs Conainerd.md",
@@ -195,7 +195,6 @@
     "06 Security/Images/Pasted image 20260104203048.png",
     "06 Security/Images/Pasted image 20260104203007.png",
     "06 Security/Images/Pasted image 20260104202914.png",
-    "06 Security/Images/Pasted image 20251230231455.png",
     "06 Security/6 TLS In K8s.md",
     "04 Application Lifecycle Management/8 Multi Container Pods.md",
     "06 Security/3 Authentication.md",
