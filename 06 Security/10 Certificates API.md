@@ -3,7 +3,7 @@ tags:
   - security
 ---
 - This article explains how to manage certificates and introduces the Certificate API in Kubernetes.
-- In a typical cluster setup, an administrator first configures a Certificate Authority (CA) server and generates certificates for the various components. 
+- In a typical cluster setup, an administrator first configures a Certificate Authority (CA) server and generates certificates for the various components.   
 - Once the services are launched with these certificates, the cluster becomes operational. 
 - Initially, only one administrator has access via a personal admin certificate and key. However, as new team members join, each must obtain their own certificate and key pair to access the cluster.
 - When a new administrator joins, she generates her own private key and creates a certificate signing request (CSR). 
