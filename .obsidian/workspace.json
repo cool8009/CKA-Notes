@@ -11,12 +11,14 @@
             "id": "c49a8e99a5394adc",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "06 Security/Images/Pasted image 20260106212615.jpg"
+                "file": "06 Security/17 Image Security.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260106212615"
+              "icon": "lucide-file",
+              "title": "17 Image Security"
             }
           }
         ]
@@ -167,10 +169,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4fac80966a49d4f2",
+  "active": "c49a8e99a5394adc",
   "lastOpenFiles": [
-    "06 Security/14 RBAC.md",
+    "Exam Tips/Service accounts and kubectl set.md",
+    "06 Security/16 Service Accounts.md",
+    "06 Security/Images/Pasted image 20260117170112.png",
+    "06 Security/Images/Pasted image 20260117171050.png",
+    "06 Security/18 Prerequisite - Security In Docker.md",
+    "06 Security/Images/Pasted image 20260117165747.jpg",
     "06 Security/15 Cluster Roles.md",
+    "06 Security/20 - Network Policies.md",
+    "06 Security/19 - Security Contexts.md",
+    "06 Security/17 Image Security.md",
+    "06 Security/Images/Pasted image 20260117164549.jpg",
+    "06 Security/14 RBAC.md",
+    "06 Security/Images/Pasted image 20260106212615.jpg",
     "06 Security/Images/Pasted image 20260110203411.png",
     "04 Application Lifecycle Management/4 Configure Environment Variables in Applications.md",
     "06 Security/13 Authorization.md",
@@ -186,27 +199,17 @@
     "06 Security/3 Authentication.md",
     "06 Security/10 Certificates API.md",
     "06 Security/Images/Pasted image 20260106212622.jpg",
-    "06 Security/Images/Pasted image 20260106212615.jpg",
     "06 Security/11 KubeConfig.md",
-    "06 Security/Images/Pasted image 20260106191311.png",
-    "06 Security/Images/Pasted image 20260106191625.png",
-    "06 Security/Images/Pasted image 20260104202802.png",
     "06 Security/9 View Certificate Lab Solution.md",
     "01 Core Concepts/01 Docker vs Conainerd.md",
     "03 Logging and Monitoring/2 Managing Application Logs.md",
     "03 Logging and Monitoring/1 Monitoring Kubernetes Cluster Components.md",
-    "06 Security/Images/Pasted image 20260104203306.png",
     "04 Application Lifecycle Management/8 Multi Container Pods.md",
     "06 Security/2 K8s Security Primitives.md",
     "06 Security/1 Security Intro.md",
     "06 Security/Images",
-    "05 Cluster Maintenance/05 Backup and Restore Methods.md",
     "06 Security",
-    "05 Cluster Maintenance/06 WORKING WITH ETCDCTL & ETCDUTL.md",
-    "05 Cluster Maintenance/04 Cluster Upgrade Process.md",
-    "Exam Tips/Tip for the exam.md",
     "CKA-Notes.rar",
-    "01 Core Concepts/08 kubelet.md",
     "05 Cluster Maintenance/images",
     "Untitled.base",
     "05 Cluster Maintenance",
