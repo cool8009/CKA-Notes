@@ -11,14 +11,10 @@
             "id": "c49a8e99a5394adc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "01 Core Concepts/13 Deployments.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "13 Deployments"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -171,6 +167,8 @@
   },
   "active": "c49a8e99a5394adc",
   "lastOpenFiles": [
+    "CHANGELOG.md",
+    "01 Core Concepts/13 Deployments.md",
     "01 Core Concepts/14 Services - NodePort.md",
     "05 Cluster Maintenance/04 Cluster Upgrade Process.md",
     "06 Security/17 Image Security.md",
@@ -205,8 +203,6 @@
     "06 Security/9 View Certificate Lab Solution.md",
     "01 Core Concepts/01 Docker vs Conainerd.md",
     "03 Logging and Monitoring/2 Managing Application Logs.md",
-    "03 Logging and Monitoring/1 Monitoring Kubernetes Cluster Components.md",
-    "04 Application Lifecycle Management/8 Multi Container Pods.md",
     "06 Security/Images",
     "06 Security",
     "CKA-Notes.rar",
