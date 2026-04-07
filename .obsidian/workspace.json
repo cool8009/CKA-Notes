@@ -11,10 +11,14 @@
             "id": "c49a8e99a5394adc",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "04 Application Lifecycle Management/00 - Application Lifecycle Management Map.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "00 - Application Lifecycle Management Map"
             }
           }
         ]
@@ -167,6 +171,20 @@
   },
   "active": "c49a8e99a5394adc",
   "lastOpenFiles": [
+    "04 Application Lifecycle Management/4 Configure Environment Variables in Applications.md",
+    "Exam Tips/00 - Exam Tips Map.md",
+    "06 Security/00 - Security Map.md",
+    "05 Cluster Maintenance/00 - Cluster Maintenance Map.md",
+    "04 Application Lifecycle Management/00 - Application Lifecycle Management Map.md",
+    "03 Logging and Monitoring/00 - Logging and Monitoring Map.md",
+    "02 Scheduling/00 - Scheduling Map.md",
+    "01 Core Concepts/00 - Core Concepts Map.md",
+    "00 - CKA Notes Map.md",
+    "scripts/__pycache__/build_chapter_maps.cpython-311.pyc",
+    "scripts/build_chapter_maps.py",
+    "04 Application Lifecycle Management/3 Commands and Arguments in Kubernetes.md",
+    "05 Cluster Maintenance/00 kubeadm.md",
+    "01 Core Concepts/00 Cluster Architecture.md",
     "CHANGELOG.md",
     "01 Core Concepts/13 Deployments.md",
     "01 Core Concepts/14 Services - NodePort.md",
@@ -185,24 +203,12 @@
     "06 Security/14 RBAC.md",
     "06 Security/Images/Pasted image 20260106212615.jpg",
     "06 Security/Images/Pasted image 20260110203411.png",
-    "04 Application Lifecycle Management/4 Configure Environment Variables in Applications.md",
     "06 Security/13 Authorization.md",
     "06 Security/Images/Pasted image 20260110201949.jpg",
     "06 Security/Images/Pasted image 20260110201645.jpg",
     "06 Security/Images/Pasted image 20260110201612.jpg",
     "06 Security/12 API Groups.md",
-    "06 Security/8 View Certificate Details.md",
-    "06 Security/7 TLS in K8s - Generating Certificates.md",
-    "06 Security/6 TLS In K8s.md",
-    "06 Security/5 TLS Basics.md",
-    "06 Security/4 TLS Introduction.md",
-    "06 Security/3 Authentication.md",
-    "06 Security/10 Certificates API.md",
     "06 Security/Images/Pasted image 20260106212622.jpg",
-    "06 Security/11 KubeConfig.md",
-    "06 Security/9 View Certificate Lab Solution.md",
-    "01 Core Concepts/01 Docker vs Conainerd.md",
-    "03 Logging and Monitoring/2 Managing Application Logs.md",
     "06 Security/Images",
     "06 Security",
     "CKA-Notes.rar",
@@ -210,8 +216,6 @@
     "Untitled.base",
     "05 Cluster Maintenance",
     "Exam Tips",
-    "04 Application Lifecycle Management/Images",
-    "04 Application Lifecycle Management",
-    "Untitled 1"
+    "04 Application Lifecycle Management/Images"
   ]
 }
