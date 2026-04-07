@@ -13,7 +13,7 @@ aliases:
 - However, we don't want to upgrade all at once, this may impact users. We wanna do **rolling updates**.
 - We also would like to be able to **rollback** breaking changes.
 - Finally, if we would like to make multiple changes, we don't wanna apply each change immediately - you would like to apply a **pause, make the changes, and then resume**, so that all the changes are rolled out together. ![13 Deployments image 1](Images/Pasted%20image%2020250317195415.png)
-- This is available with **Deployments**. Our apps are running in containers, these run in PODs, these are managed by ReplicaSets, and the **final layer is a Deployment**, which allows us to do all of the above seamlessly:
+- This is available with **Deployments**. Our apps are running in containers, these run in PODs, these are managed by [[12 ReplicaSets|ReplicaSets]], and the **final layer is a Deployment**, which allows us to do all of the above seamlessly:
 	![13 Deployments image 2](Images/Pasted%20image%2020250317195528.png)
 - How do we create a Deployment? With a definition file!
 - The deployment file is identical to the **ReplicaSet** file, except for `kind: Deployment`. 
@@ -21,3 +21,4 @@ aliases:
 - `kubectl get deployments`
 - `kubectl get replicaset` will show you the automatically created ReplicaSets by the deployment.
 - `kubectl get all` to see **all objects.**
+- For the rollout and rollback flow built on top of Deployments, continue to [[1 Rolling Updates and Rollbacks]].

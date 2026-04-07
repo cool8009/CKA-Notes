@@ -3,6 +3,7 @@ tags:
   - security
 ---
 - 2 types of accs in K8s - **service account and user accounts.**
+- Service accounts are the non-human identity side of [[3 Authentication]].
 - ![16 Service Accounts image 1](Images/Pasted%20image%2020260117165747.jpg)
 - Consider an example: "my Kubernetes dashboard," a basic dashboard application built with Python. 
 - This application retrieves a list of Pods from a Kubernetes cluster by sending API requests and subsequently displays the results on a web page. To authenticate its API requests, the application uses a dedicated service account.
@@ -160,6 +161,8 @@ spec:
     image: my-kubernetes-dashboard
 ```
 Or use the same param in the SA definition file to make it SA wide.
+
+- Permissions for these accounts are typically granted with [[14 RBAC]] or [[15 Cluster Roles]].
 
 
 **What if you want to create a token to be used outside a cluster?**

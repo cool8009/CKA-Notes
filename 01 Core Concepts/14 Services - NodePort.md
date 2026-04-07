@@ -15,7 +15,7 @@ aliases:
 - Enable comms between various components within or outside the application.
 - Helps us connect apps together with other apps or users.
 - For example, our app has groups of pods running various section: for serving front end loads, for back end, and for connecting to an external data source.
-- Services enable connectivity between the groups of PODs:
+- Services enable connectivity between the groups of [[10 POD]]s:
 	![14 Services NodePort image 1](Images/Pasted%20image%2020250317202314.png)
 - Thus, they enable **loose coupling** between microservices in our app.
 - Let's talk about one use case, external communication. The node has an IP address, my laptop is on the same network, but the internal POD has it's own network with it's own IP. I can't currently ping or access the POD at it's IP address:
@@ -28,8 +28,8 @@ aliases:
 - This service is known as a **NodePort** service:
 	![14 Services NodePort image 3](Images/Pasted%20image%2020250317202739.png)
 - There are other kinds of services available.
-- **Cluster IP** is also a service, which creates a **virtual IP** in the cluster to enable communication.
-- **Load Balancer** is also a service, which provisions an LB.
+- **[[15 Services - Cluster IP|Cluster IP]]** is also a service, which creates a **virtual IP** in the cluster to enable communication.
+- **[[16 Services - Load Balancer|Load Balancer]]** is also a service, which provisions an LB.
 - ![14 Services NodePort image 4](Images/Pasted%20image%2020250317202938.png)
 - We will discuss NodePort for now.
 - It's basically a virtual server inside the node. Inside the cluster, it has it's own IP address which is called **cluster IP of the service.**
@@ -57,7 +57,7 @@ spec:
 - If you don't provide a `nodePort`, a free port in the range 30000 - 32767 will be selected.
 - You can have multiple such mappings within a single service.
 - One thing is missing. We specified a targetPort, but didn't tell it which POD is the target. There could be infinite PODs with port 80 listening.
-- As we did previously and how do a lot in K8s, we will use **labels and selectors** to link these together in the  `spec`:
+- As we did previously and how do a lot in K8s, we will use [[2 Labels and Selectors|labels and selectors]] to link these together in the  `spec`:
 ```
 spec:
 	type: NodePort #service type

@@ -13,6 +13,7 @@ aliases:
 	![17 Namespaces image 2](Images/Pasted%20image%2020250319205141.png)
 - Each NS has it's own set of policies, quota of resources, etc.
 - Inside the NS, resources can refer to each other just by their names.
+- This applies to common objects such as [[10 POD]]s and [[15 Services - Cluster IP|services]].
 - Outside, they have to append the NS name to the service name, like so:
 		`db-service.dev.svc.cluster.local `
 		`service-name.namespace.svc.cluster.local`
@@ -32,6 +33,7 @@ metadata:
 - Or by running `kubectl create namespace nsname`
 - To change ns, as in, don't have to add `--namespace` for every command, use
   `kubectl config set-context $(kubectl config current-context) --namespace=dev `
+- This context-driven default namespace behavior ties directly into [[11 KubeConfig]].
 - Now, when you run `get pods`, you won't have to specify ns for dev pods.
 - To create a **resource quota** for a namespace, do this:
 ```

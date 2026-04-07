@@ -2,7 +2,7 @@
 tags:
   - security
 ---
-- We talked about Authn. 
+- We talked about [[3 Authentication|Authn]]. 
 - We saw how to get access to the cluster: certs, CAs etc.
 - But once you get access, WHAT can you do?
 - Once a user gains access, authorization ensures they only have the appropriate permissions for their role. For example, a cluster administrator can view various objects such as Pods, Nodes, and Deployments:
@@ -83,7 +83,7 @@ Error from server (Forbidden): nodes "worker-2" is forbidden: User "developer" c
 	
 	- Each time security requirements change, you must manually update this policy file and restart the Kube API Server. This manual process can be tedious and set the stage for more streamlined methods such as Role-Based Access Control (RBAC).
 
-- **An example of RBAC:**
+- **An example of [[14 RBAC|RBAC]]:**
 	- Instead of directly associating a user or a group a set of perms, we define a **role**.
 	- The role has a set of perms, and we assign all the relevant people to that role.
 	- ![13 Authorization image 3](Images/Pasted%20image%2020260110201949.jpg)
@@ -145,3 +145,4 @@ Error from server (Forbidden): nodes "worker-2" is forbidden: User "developer" c
 	
 	- **When multiple modes are configured, each request is processed sequentially in the order specified.** For example, a user’s request is first evaluated by the node authorizer. If the request does not pertain to node-specific actions and is consequently denied, it is then passed to the next module, such as RBAC. Once a module approves the request, further checks are bypassed and the user is granted access.
 	- **For each request, the authz is determined by the order of the types of authz modes. If a request fails, the next authz mode is checking the request, until it is succesful.**
+- In practice, the most exam-relevant follow-ups here are [[14 RBAC]] and [[15 Cluster Roles]].

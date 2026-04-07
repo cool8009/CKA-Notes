@@ -8,7 +8,11 @@ If you already have a solid understanding of TLS certificates, feel free to skip
 
 ![The image lists goals related to TLS certificates, including understanding, generating, configuring, viewing, and troubleshooting them, particularly in the context of Kubernetes.](https://kodekloud.com/kk-media/image/upload/v1752869971/notes-assets/images/CKA-Certification-Course-Certified-Kubernetes-Administrator-TLS-Introduction/frame_70.jpg)
 
+- If you want the hub view first, start at [[00 Certificates]].
+
 We begin with the fundamentals of certificates, covering key concepts such as certificate authorities, issuance, and validation processes. If these basics are already within your grasp, you may proceed to the next section where we delve deeper into managing certificates specifically in Kubernetes.
+
+- The natural progression from here is [[5 TLS Basics]], then [[6 TLS In K8s]] and [[10 Certificates API]].
 
 Note
 

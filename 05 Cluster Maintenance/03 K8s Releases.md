@@ -3,6 +3,7 @@ tags:
   - maintenance
 ---
 `kubectl get nodes` shows the node version.
+- This is the conceptual lead-in to [[04 Cluster Upgrade Process]] and the operational workflow around [[00 kubeadm|kubeadm]].
 - The version number follows a SemVer structure:
 - Kubernetes release versions follow a three-part semantic versioning scheme: major, minor, and patch.
 

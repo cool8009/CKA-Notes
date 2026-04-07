@@ -19,3 +19,4 @@ tags:
 			 image: nginx
 - They are required.
 - `kubectl describe pod myapp-pod` to view info on specific pod.
+- The same YAML structure becomes the template used by higher-level objects such as [[12 ReplicaSets]] and [[13 Deployments]].

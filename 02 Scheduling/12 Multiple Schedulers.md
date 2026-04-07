@@ -8,7 +8,7 @@ aliases:
 
 - We have seen how the default scheduler works:
 	  - Uses and algorithm to distribute nodes evenly.
-	  - Takes into account taints and tolerations, node affinity, etc.
+	  - Takes into account [[3 Taints and Tonerations|taints and tolerations]], [[5 Node Affinity|node affinity]], etc.
 - What if this doesn't satisfy my needs, and I need custom checks or something before placing a pod on a node? 
 - I decide to create a custom algorithm to place PODs on nodes, so I can add custom conditions and checks.
 - K8s is highly extensible - you can write your own custom scheduler and deploy it, and use it either as a default scheduler or in addition to the default one.
@@ -71,7 +71,7 @@ profiles:
 	```
 
 - The thing is, 99% of the time this is **not** how you would deploy your scheduler nowadays.
-- With kubeadm, all control plane components run as pods. 
+- With [[00 kubeadm|kubeadm]], all control plane components run as pods. 
 - To deploy it as a POD:
 	  ### Example Pod Definition
 	
@@ -110,6 +110,7 @@ profiles:
 	Leader election is an important configuration for high-availability (more in another section) environments. It ensures that while multiple scheduler instances are running, only one actively schedules the pods.
 
 - In the K8s docs, there's a section about making a custom scheduler, how to build it, and how to deploy it. 
+- If you want to keep one scheduler binary but expose multiple behaviors, continue to [[13 Configuring Scheduler Profiles|scheduler profiles]].
 - In many modern Kubernetes setups—especially those using kubeadm—control plane components run as pods or deployments. Below is an example of deploying a custom scheduler as a Deployment.
 
 - ## Configuring Workloads to Use the Custom Scheduler

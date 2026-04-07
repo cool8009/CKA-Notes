@@ -13,7 +13,7 @@ aliases:
 - Registers the node in the cluster. 
 - When it gets a request to load a container, it instructs the current container runtime (docker for example) to pull the image and run an instance.
 - Continues to monitor the POD and reports to the [[04 kube-api]] on a timely basis.
-- In contrast with other services, when deploying a cluster with [[kubeadm]] it **doesn't** automatically deploy kubelet.
+- In contrast with other services, when deploying a cluster with [[00 kubeadm|kubeadm]] it **doesn't** automatically deploy kubelet.
 - Instead, you must always manually install kubelet on the worker nodes.
 - Download, extract and run as a service.
 - `ps -aux | grep kubelet` to view on the **worker node**.

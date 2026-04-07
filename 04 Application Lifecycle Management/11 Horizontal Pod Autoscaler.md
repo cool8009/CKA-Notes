@@ -4,6 +4,8 @@ tags:
 ---
 - ## Manual Horizontal Scaling
 
+- This is one of the main continuations of [[10 Introduction To Autoscaling (2025 Updates)|the autoscaling intro]].
+
 - As a Kubernetes administrator, you might manually scale your application to ensure it has enough resources during traffic spikes. Consider the following deployment configuration:
 
 ```
@@ -52,6 +54,8 @@ $ kubectl scale deployment my-app --replicas=3
 - Manual scaling requires continuous monitoring and timely intervention, which may not be ideal during unexpected surges in traffic.
 - So this is the manual way to do it: monitor the deployment, see if resources are being maxed out, add more pods (horizontal scaling)
 - ## Introducing the Horizontal Pod Autoscaler (HPA)
+
+- The metrics-server path described in [[1 Monitoring Kubernetes Cluster Components]] is what makes this automation possible.
 
 - To address the shortcomings of manual scaling, Kubernetes offers the Horizontal Pod Autoscaler (HPA). HPA continuously monitors pod metrics—such as CPU, memory, or custom metrics—using the metrics-server. 
 - Based on these metrics, HPA automatically adjusts the number of pod replicas in a deployment, stateful set, or replica set. When resource usage exceeds a preset threshold, HPA increases the pod count; when usage declines, it scales down to conserve resources.

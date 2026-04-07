@@ -13,6 +13,7 @@ tags:
 - Metrics Server is designed to be deployed once per Kubernetes cluster. 
 - It collects metrics from nodes and pods, aggregates the data, and retains it in memory. 
 - Keep in mind that because Metrics Server stores data only in memory, it does not support historical performance data. For long-term metrics, consider integrating more advanced monitoring solutions.
+- These metrics also feed features like [[11 Horizontal Pod Autoscaler|HPA]] and [[13 Vertical Pod Autoscaler|VPA]].
 - How are the metrics collected?
 - The kubelet has a subcomponent called **cAdvisor**. It's responsible for retrieving performance metrics from the pods and exposing them via the kubelet api, to make the metrics available to the Metrics Server.
 - If you are experimenting locally with Minikube, you can enable the Metrics Server add-on using the following command:

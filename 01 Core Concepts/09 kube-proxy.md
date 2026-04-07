@@ -12,7 +12,7 @@ aliases:
 - There are many solutions available for that.
 - For example, a web app deployed on a node and a DB deployed on a different node. They can reach each other by using the IP of the POD.
 - There is though, **no guarantee** that the IP won't change. 
-- Therefore, a better way to expose the database is to use a service, let's call it **db**.
+- Therefore, a better way to expose the database is to use a [[15 Services - Cluster IP|service]], let's call it **db**.
 - The service also gets an IP, and whenever a POD tries to reach the service, it forwards the request to the backend POD, in this case, the database itself.
 - But what is this service?
 - It's not a container or something that lives in the network. It doesn't have a listener or something. It's a **virtual component that lives in K8s memory, and doesn't actually "exist".**
@@ -23,4 +23,4 @@ aliases:
   ![09 kube proxy image 2](Images/Pasted%20image%2020250125182504.png)
 - That's how kube-proxy configures a service. We will discuss this later in the course.
 - To install kube-proxy is the same, run as a service.
-- With [[kubeadm]], it is deployed as a [[daemonset]], so it will be deployed on each node in the cluster.  
+- With [[00 kubeadm|kubeadm]], it is deployed as a [[8 DaemonSets|DaemonSet]], so it will be deployed on each node in the cluster.  

@@ -4,22 +4,24 @@ tags:
 ---
 ![6 TLS In K8s image 1](Images/Pasted%20image%2020251230225431.png)
 
+- This is the Kubernetes-specific continuation of [[00 Certificates]] and [[4 TLS Introduction]].
+
 - Certificate files follow specific naming conventions. Public key certificates typically have a .crt or .pem extension (e.g., server.crt, server.pem, client.crt, client.pem). In contrast, private keys usually include the word "key" in their file name or extension (e.g., server.key or server-key.pem). If a file name lacks "key," it is almost certainly a public key certificate.
 - ![6 TLS In K8s image 2](Images/Pasted%20image%2020251230225507.png)
-- A Kubernetes cluster consists of master and worker nodes that require secure, encrypted communication. Whether the connection is being made by an administrator using the kubectl utility or directly interacting with the Kubernetes API, a secure TLS connection is essential. 
+- A Kubernetes cluster consists of [[19 Control Plane|control plane]] and [[22 worker node|worker nodes]] that require secure, encrypted communication. Whether the connection is being made by an administrator using the kubectl utility or directly interacting with the Kubernetes API, a secure TLS connection is essential. 
 - Additionally, services within the cluster use server certificates to secure their communications, while client certificates authenticate users or other cluster components.
 - ### Kubernetes Components and Their Certificates
 
 - Below is an overview of the main Kubernetes components and the associated certificate configurations:
 
-1. **Kube API Server**  
+1. **[[04 kube-api|Kube API Server]]**  
     The API server exposes an HTTPS service for managing the cluster. It acts as a server and requires its own certificate and key pair (e.g., `api-server.crt` and `api-server.key`).  
     _Note: Certificate names may vary based on your cluster setup._
     
-2. **ETCD Server**  
+2. **[[02 ETCD|ETCD Server]]**  
     Serving as the datastore for all cluster information, ETCD requires a unique pair of certificates and keys (e.g., `etcd-server.crt` and `etcd-server.key`).
     
-3. **Kubelet on Worker Nodes**  
+3. **[[08 kubelet|Kubelet on Worker Nodes]]**  
     On each worker node, the kubelet service exposes an HTTPS endpoint that communicates with the API server for monitoring and management. This service uses its own certificate and key pair (typically named `kubelet.cert` and `kubelet.key`).
     
 
@@ -32,13 +34,13 @@ Several components operate as clients and require authentication when connecting
 1. **Administrator (kubectl/REST API)**  
     The admin user employs a client certificate and key pair (e.g., `admin.crt` and `admin.key`) to establish a secure connection to the API server.
     
-2. **Scheduler**  
+2. **[[07 kube-scheduler|Scheduler]]**  
     Managing pod scheduling, the scheduler requires its own client certificate (e.g., `scheduler.crt` and `scheduler.key`) to interact with the API server.
     
-3. **Kube Controller Manager**  
+3. **[[06 Controller-Manager|Kube Controller Manager]]**  
     This component also utilizes a dedicated certificate pair for authenticating its requests to the API server.
     
-4. **Kube Proxy**  
+4. **[[09 kube-proxy|Kube Proxy]]**  
     Handling network routing within the cluster, the kube proxy uses a client certificate (generally named `kube-proxy.crt` and `kube-proxy.key`) for secure communications with the API server.
 
 ![6 TLS In K8s image 3](Images/Pasted%20image%2020251230231455.png)

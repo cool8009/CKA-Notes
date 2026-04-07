@@ -3,6 +3,7 @@ tags:
   - maintenance
 ---
 - Cluster maintenance related topics
+- Follow this section through [[03 K8s Releases]], [[04 Cluster Upgrade Process]], [[05 Backup and Restore Methods]], and [[06 WORKING WITH ETCDCTL & ETCDUTL]].
 - ## Operating System and Node Maintenance
 
 We begin by discussing operating system upgrades and the considerations involved when a node is lost from the cluster, either unintentionally or due to deliberate removal for patching or upgrading purposes. Understanding these procedures is critical to ensuring minimal disruption to your Kubernetes environment.

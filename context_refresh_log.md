@@ -14,12 +14,12 @@ It is meant to answer:
 - what validations were run
 - what remains for the next phase
 
-This log covers work completed through:
+This log originally covered work completed through:
 
 - Phase 1: repository audit and conventions analysis
 - Phase 2: local image embed migration for Obsidian + GitHub compatibility
 
-This log does **not** mean the overall project is finished. Phase 3 remains pending.
+At the time of the original handoff, Phase 3 remained pending. That work has now been completed; see the addendum at the end of this file.
 
 Date context for this refresh:
 
@@ -906,3 +906,84 @@ At the end of the work covered by this log:
 - external images were preserved
 - note-to-note link structure has not yet been semantically improved
 - a detailed context-refresh file now exists for resuming later work safely
+
+---
+
+## Phase 3 Completion Addendum
+
+Date context:
+
+- Completion date: `2026-04-07`
+
+Phase 3 has now been completed.
+
+### What changed in Phase 3
+
+- internal wikilink connectivity was improved conservatively across:
+  - `01 Core Concepts`
+  - `02 Scheduling`
+  - `03 Logging and Monitoring`
+  - `04 Application Lifecycle Management`
+  - `05 Cluster Maintenance`
+  - `06 Security`
+- concept hub / bridge notes were added where the repo already had strong implied concepts but weak navigation:
+  - `01 Core Concepts/19 Control Plane.md`
+  - `05 Cluster Maintenance/00 kubeadm.md`
+  - `06 Security/00 Certificates.md`
+- existing placeholder node notes were turned into lightweight linkable concepts:
+  - `01 Core Concepts/20 nodes.md`
+  - `01 Core Concepts/22 worker node.md`
+- a reproducible internal-link validator was added:
+  - `scripts/analyze_internal_links.py`
+
+### Phase 3 linking strategy actually used
+
+- resolve obvious concept placeholders with real note targets or aliases
+- add inline wikilinks where the surrounding sentence already implied a strong relationship
+- use hub-style notes only for concepts already referenced broadly across the vault
+- avoid broad rewrites, file renames, or mechanical "related links everywhere" sections
+
+### Validation result after Phase 3
+
+Validation command used:
+
+```text
+python scripts\analyze_internal_links.py --limit 30
+```
+
+Result:
+
+- notes scanned: `89`
+- wikilinks found: `247`
+- resolved wikilinks: `247`
+- unresolved wikilinks: `0`
+
+### Remaining weak-note / manual-review areas
+
+The validator still reports weakly connected notes, but they are now concentrated mostly in:
+
+- placeholder / untitled notes
+- isolated exam-tip notes
+- a few untouched topic notes that were intentionally not expanded during this conservative pass
+
+Examples still showing `0` total links in the current validator output:
+
+- `01 Core Concepts/21 1Untitled.md`
+- `01 Core Concepts/Untitled.md`
+- `01 Core Concepts/Untitled 1.md`
+- `02 Scheduling/9 Editing Pods and Deployments.md`
+- `03 Logging and Monitoring/2 Managing Application Logs.md`
+- `04 Application Lifecycle Management/2 Commands and Arguments in Docker.md`
+- `04 Application Lifecycle Management/3 Commands and Arguments in Kubernetes.md`
+- `04 Application Lifecycle Management/4 Configure Environment Variables in Applications.md`
+- `04 Application Lifecycle Management/7 Encrypting Secret Data at Rest.md`
+- `05 Cluster Maintenance/02 OS Upgrades.md`
+- several `Exam Tips/*` notes
+
+These are review candidates, not migration failures.
+
+### Final reporting
+
+The repo now has a final cross-phase summary file:
+
+- `final_repo_update_report.md`

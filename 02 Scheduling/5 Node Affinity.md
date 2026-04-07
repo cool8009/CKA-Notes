@@ -5,6 +5,7 @@ aliases:
   - Affinity
   - affinity
   - Node Affinity
+  - node affinity
 ---
 - Node Affinity is more advanced scheduling solution that goes a step further than [[4 Node Selectors]].
 - Node affinity enables advanced ways to limit or enable pod placement on specific nodes.
@@ -94,6 +95,8 @@ aliases:
 ![5 Node Affinity image 2](Images/Pasted%20image%2020250504231418.jpg)
 
 **Summary**
+
+- See [[6 Node Affinity vs Taints and Tolerations]] for the practical comparison with [[3 Taints and Tonerations|taints and tolerations]].
 
 Node affinity empowers you to define sophisticated scheduling rules for pod placement based on node labels. Key takeaways include:
 

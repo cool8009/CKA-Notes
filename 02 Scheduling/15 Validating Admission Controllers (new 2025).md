@@ -6,6 +6,7 @@ aliases:
 - In this lesson, we take an in-depth look at Admission Controllers in Kubernetes—covering both validating and mutating functions—and learn how to configure custom Admission Controllers.
 - Understanding these controllers is essential for ensuring that Kubernetes objects are created and modified correctly.
 - We looked at the `NamespaceExists` AC. It helps validate if a namespace alr. exists, and reject the req if it doesn't. This is known as a **validating AC**.
+- This note continues directly from [[14 Admissions Controllers (new 2025)|Admission Controllers]].
 - The `DefaultStorageClass` plugin.
 - The default storage class admission controller is enabled by default. When you create a PersistentVolumeClaim (PVC) without specifying a storage class, the request is authenticated, authorized, and then passed through the admission controller. This controller mutates the request by adding the default storage class if none is provided.
 

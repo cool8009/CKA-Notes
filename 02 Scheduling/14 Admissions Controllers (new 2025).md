@@ -8,8 +8,8 @@ tags:
   - scheduling
 ---
 - We have been using the `kubectl` util to run commands.
-- We know that every time we use it, the request goes to the api server, the pod is created, and the information is persisted in the etcd database.
-- When a request happens, it is also authenticated, usually via certificates.
+- We know that every time we use it, the request goes to the [[04 kube-api|api server]], the pod is created, and the information is persisted in the [[02 ETCD|etcd]] database.
+- When a request happens, it is also [[3 Authentication|authenticated]], usually via [[00 Certificates|certificates]].
 - If it was sent through kubectl, we know the kubeconfig has the certificates already configured, and the **authn** process is responsible on making sure the user who sent the requests is valid.
   Consider the following configuration:
 
@@ -22,7 +22,7 @@ clusters:
     server: https://example.com
   name: example-cluster
 ```
-- Afterwards, the req goes through an **authz** process, to make sure that the user has the required **premissions** to do the task. This perms are governed via RBAC.
+- Afterwards, the req goes through an **[[13 Authorization|authz]]** process, to make sure that the user has the required **premissions** to do the task. This perms are governed via [[14 RBAC|RBAC]].
   For instance, if a user is assigned the following role:
 
 ```
@@ -71,7 +71,7 @@ rules:
 
 - And many more.
 - An in depth example:
-	 - Say we wanna create a pod in a namespace called `blue` that doesn't exist.
+	 - Say we wanna create a pod in a [[17 Namespaces|namespace]] called `blue` that doesn't exist.
 	 - If I run `kubectl run nginx --image nginx --namespace blue`, this will throw an error.
 	 - In this example, my req gets **authn, authz** but doesn't pass the **admission controller**, specifically the `NamespaceExists` one.
 	 - Alternatively, Kubernetes offers the NamespaceAutoProvision admission controller (not enabled by default) to automatically create a missing namespace.

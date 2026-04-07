@@ -2,8 +2,8 @@
 tags:
   - ALM
 ---
-- Let's try to understand rollouts and versioning in a deployment.
-- When you first create a deployment, K8s initiates what's called a **rollout**. This rollout creates a new ReplicaSet, which establishes the first **deployment revision** (Revision 1).
+- Let's try to understand rollouts and versioning in a [[13 Deployments|deployment]].
+- When you first create a deployment, K8s initiates what's called a **rollout**. This rollout creates a new [[12 ReplicaSets|ReplicaSet]], which establishes the first **deployment revision** (Revision 1).
 - In the future, when the app is updated, a new rollout is triggered, and a new deployment revision named Revision 2 is subsequently created:
   ![1 Rolling Updates and Rollbacks image 1](Images/Pasted%20image%2020251005091822.png)
 - This helps us track deployments, and helps us roll back to a previous deployment if necessary.

@@ -10,12 +10,13 @@ tags:
 - In the imperative approach, these commands are good for quick changes, or for the exam:
 	![18 Imperative vs Declarative image 2](Images/Pasted%20image%2020250319212525.png)
 - They are however **limited** in functionality. They are also only created once and forgotten, making it hard to recreate or manage large deployments.
-- With yaml files, we can store our processes and workflows, objects definitions and everything we need. This can be placed in git, and we can even created change approval and review process for them.
+- With [[11 PODs as YAML|YAML files]], we can store our processes and workflows, object definitions and everything we need. This can be placed in git, and we can even created change approval and review process for them.
 - When running `kubectl edit`, the yaml is not the object's yaml, it's instead a representation of it in the K8s memory. Therefore, editing the file from the `edit` command **won't change the original manifest**. It's not really recorded anywhere.
 - A better approach is to edit the manifest first, and then running `kubectl replace` to update the object in place. 
 - This is still **imperative**, as we are still telling K8s what to do, and manually creating and updating objects, even if it's with yamls.
 - With the **declarative** approach, we use the `apply` command to create objects. This will make sure this object will be created if it doesn't already exist, update if a change in the yaml has been made, etc.
 - You can also specify a path to a folder with yamls, and all objects there will be created at once.
+- This becomes especially useful once you start managing higher-level objects such as [[13 Deployments]].
 ---
  While you would be working mostly the declarative way – using definition files, imperative commands can help in getting one-time tasks done quickly, as well as generate a definition template easily. This would help save a considerable amount of time during your exams.
 

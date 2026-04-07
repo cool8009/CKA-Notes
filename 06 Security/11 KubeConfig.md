@@ -2,7 +2,7 @@
 tags:
   - security
 ---
-- We've seen how to generate certs for users.
+- We've seen how to generate [[00 Certificates|certs]] for users.
 - We can also query the K8s API with curl.
 - Previously, we generated a certificate for a user and utilized the certificate along with a key to query the Kubernetes REST API for a list of pods. For instance, if your cluster is named "my kube playground," you can make a curl request to the API server as follows:
 
@@ -46,6 +46,7 @@ No resources found.
 - Typing this is a tedious task. We can move this information to a config file, and specify it in a command line option:
   ![11 KubeConfig image 1](Images/Pasted%20image%2020260106191311.png)
 - By default, `--kubeconfig` looks for a file called `config` in `~/.kube`.
+- This is one of the main practical follow-ups to [[3 Authentication]].
 - Once properly set up, you can simply execute:
 
 ```
@@ -156,7 +157,7 @@ kubectl config use-context prod-user@production
 ```
 ## Configuring Default Namespaces
 
-- Namespaces in Kubernetes help segment clusters into multiple virtual clusters. You can configure a context to automatically use a specific namespace. Consider the following kubeconfig snippet without a default namespace:
+- [[17 Namespaces|Namespaces]] in Kubernetes help segment clusters into multiple virtual clusters. You can configure a context to automatically use a specific namespace. Consider the following kubeconfig snippet without a default namespace:
 
 ```
 apiVersion: v1

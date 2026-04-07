@@ -24,7 +24,7 @@ spec:
           cpu: 10
 ```
 
-- Before using this priority, you must create a priority class with a specific name and a priority value. Assigning a value like 1,000,000, for example, grants a very high priority. This ensures that pods with higher priorities are scheduled ahead of those with lower ones.
+- Before using this priority, you must create a [[11 Priority Classes|priority class]] with a specific name and a priority value. Assigning a value like 1,000,000, for example, grants a very high priority. This ensures that pods with higher priorities are scheduled ahead of those with lower ones.
 - After being queued, pods progress through several phases:
 
 	1. **Filter Phase:** Nodes that cannot meet the pod's resource requirements (e.g., nodes lacking 10 CPUs) are filtered out.

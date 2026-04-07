@@ -3,6 +3,7 @@ tags:
   - ALM
 ---
 - Vertically scaling a workload manually involves (after using `kubectl top` command and seeing that the resources are exhausted) editing the deployment file, specifically to what container is running, and changing the `resources:` part to add more resources to the pods in the deployment.
+- This is the vertical-scaling counterpart to [[11 Horizontal Pod Autoscaler|HPA]] and connects back to [[10 Introduction To Autoscaling (2025 Updates)|the autoscaling intro]].
 - This scales the pods up.
 - After saving, Kubernetes will terminate the current pod and create a new one with the updated resource configuration.
 - Manually updating pods can be time-consuming and error-prone. Kubernetes provides the Vertical Pod Autoscaler (VPA) to automate this process.

@@ -51,7 +51,7 @@ aliases:
 							 - name: nginx-container
 							 image: nginx
 		replicas: 3
-- Basically, it's like any K8s object yaml. We define a POD definition in the `template` section, note the indentation and not passing apiVersion and kind.
+- Basically, it's like any K8s object yaml. We define a [[10 POD]] definition in the `template` section, note the indentation and not passing apiVersion and kind.
 - Also, mention replication amount under `replicas`
 - `kubectl create -f rc-filename.yaml`
 - `kubectl get replicationcontroller`
@@ -68,9 +68,10 @@ aliases:
 - `kubectl get replicatset`
 - **Why do we label our objects in the first place?**
 - Consider we have 3 PODs not created by an RS. The RS can still monitor them and create new ones if some fail, to achieve a desired state. The RS is more like a process that monitors the PODs.
-- The RS knows what PODs to monitor via the **labels**. We can provide these labels under the `selector` section.
+- The RS knows what PODs to monitor via the **labels**. We can provide these labels under the `selector` section, just like in [[2 Labels and Selectors]].
 - Scaling the RS has multiple options:
 		- Update the .yaml and run `kubectl replace -f` 
 		- `kubectl scale --replicas=6 -f rs.yaml`
 		- `kubectl scale --replicas=6 replicaset rs` TYPE param, NAME param 
 - **Deleting the RS will also delete all underlying PODs.**
+- The next abstraction on top of ReplicaSets is the [[13 Deployments|Deployment]].

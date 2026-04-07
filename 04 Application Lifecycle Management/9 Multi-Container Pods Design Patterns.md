@@ -3,6 +3,7 @@ tags:
   - ALM
 ---
 - There are different patterns for multi container pods.
+- This expands on the basic multi-container pod setup from [[8 Multi Container Pods]].
 - The basic one, that we spoke about in prev lesson is called co-located containers. Both containers are meant to continue to run during the pod lifecycle.
 - The next one is **init containers** - when there's init steps to be taken by one container before the other one, like an init container that waits for the database to be ready before starting the main app. **The init container does its job, ends it, and then the main app starts**.
 - Sidecar containers is like an init container, but the sidecar keeps running throughout the lifecycle of the pod. This is useful for like a log shipper, that both needs to start before the main app and also run during it.

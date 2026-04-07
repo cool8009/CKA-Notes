@@ -18,6 +18,7 @@ tags:
 
 - Our focus though, is more on the cluster itself.
 - The API server is the first line of defense, as it is the heart of the system.
+- The main follow-up topics from here are [[3 Authentication]], [[13 Authorization]], and [[14 RBAC]].
 - **Who can access the cluster and what can they do?** Are the questions we should ask ourselves.
 
   ### Authentication
@@ -29,7 +30,7 @@ tags:
 	- Client certificates
 	- Integration with external authentication providers (e.g., LDAP)
 
-- Additionally, service accounts support non-human processes. Detailed guidance on these methods is available in dedicated sections of our documentation.
+- Additionally, service accounts support non-human processes. Detailed guidance on these methods is available in [[16 Service Accounts]].
 
 ![The image outlines authentication methods, including usernames, passwords, tokens, certificates, LDAP, and service accounts, under the question "Who can access?"](https://kodekloud.com/kk-media/image/upload/v1752869939/notes-assets/images/CKA-Certification-Course-Certified-Kubernetes-Administrator-Kubernetes-Security-Primitives/frame_120.jpg)
 
@@ -46,7 +47,7 @@ tags:
 
 ![The image lists types of authorization: RBAC, ABAC, Node Authorization, and Webhook Mode, under the heading "Authorization: What can they do?"](https://kodekloud.com/kk-media/image/upload/v1752869939/notes-assets/images/CKA-Certification-Course-Certified-Kubernetes-Administrator-Kubernetes-Security-Primitives/frame_140.jpg)
 
-- All the comms in cluster work via TLS certs.
+- All the comms in cluster work via [[00 Certificates|TLS certs]].
 - More on it later.
 - What about stuff in the cluster? by default all pods in the cluster can talk to eachother. You can restrict access inside the cluster as well.
 - These policies allow you to:

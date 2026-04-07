@@ -10,6 +10,7 @@ aliases:
   
 - ![11 Priority Classes image 1](Images/Pasted%20image%2020250825085931.png)
 - We need a way to make sure that higher priority workloads will take precedence over lower priority ones. This is **priority classes**.
+- The scheduler uses these priorities while ordering pending pods, which is revisited in [[13 Configuring Scheduler Profiles]].
 - Priority classes help us define priorities for different workloads, so that higher priority workloads always get priority over lower ones. **If a higher priority pod can't be scheduled, the scheduler will terminate a lower priority one to make it happen.**
 - PC's (priority classes) are non-namespaced object. 
 - Once they're created they're able to be configured on any POD in any namespace.

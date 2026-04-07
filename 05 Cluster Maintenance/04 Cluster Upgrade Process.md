@@ -2,6 +2,7 @@
 tags:
   - maintenance
 ---
+- This note builds directly on [[03 K8s Releases]] and usually uses [[00 kubeadm|kubeadm]].
 - We saw how K8s manages it's software releases.
 - ETCD and COREDNS have separate versions, detached from the k8s version.
 - The rest of the components don't need to have the same version.
