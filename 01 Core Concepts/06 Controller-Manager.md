@@ -20,11 +20,11 @@ aliases:
 	  - Ensure the desired number of pods exist and work.
 	  - If a pod dies, it creates another one.
 - There are many more controllers in K8s:
-  ![[Pasted image 20250125170324.png]]
+  ![06 Controller Manager image 1](Images/Pasted%20image%2020250125170324.png)
 - This is the brain behind a lot of things in K8s.
 - They are packaged in a process called the [[06 Controller-Manager]]. When it's installed, the controllers are installed as well.
 - You can download and install it, and then run as a service, with a lot of options provided:
-  ![[Pasted image 20250125170505.png]]
+  ![06 Controller Manager image 2](Images/Pasted%20image%2020250125170505.png)
 - If you have [[kubeadm]], it's deployed as a pod in the master node, and you can view the option in the manifests folder.
 - In a non-kubeadm setup, you can find the .service file in the `/etc/systemd/system/`
 - Also listing the process with `ps -aux | grep kube-controller-manager`

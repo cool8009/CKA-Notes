@@ -19,12 +19,12 @@ tags:
 - How do you run containers without "docker run"?
 - containerd comes with ctr, a non-user friendly CLI tool with limited features. The other way is just making API calls directly. You can pull images and run them, and other rudimentary things. Used mostly for debugging, and not for production.
 - A good alternative is nerdctl:
-- ![[Pasted image 20250125160342.png]]
+- ![01 Docker vs Conainerd image 1](Images/Pasted%20image%2020250125160342.png)
 - nerdctl vs docker:
     `$ docker run --name redis redis:alpine 
   `$ nerdctl run --name redis redis:alpine
 - **crictl** is a cli used to interact with CRI compatible runtimes. 
-  ![[Pasted image 20250125160747.png]]
+  ![01 Docker vs Conainerd image 2](Images/Pasted%20image%2020250125160747.png)
   
 - Since it's aware of [[10 POD]], as opposed to docker, crictl is the go to solution to debug and view containers running in K8s.
 

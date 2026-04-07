@@ -18,9 +18,9 @@ aliases:
 - It's not a container or something that lives in the network. It doesn't have a listener or something. It's a **virtual component that lives in K8s memory, and doesn't actually "exist".**
 - But how is it accessible across the cluster from any node? This is where **kube-proxy** comes in.
 - It's a process that runs on each node in the cluster. It's job is to look for new services, and once those are created, it creates the **appropriate rules on each node to forward traffic to those services, to the backend [[10 POD]]s:**
-  ![[Pasted image 20250125182342.png]]
+  ![09 kube proxy image 1](Images/Pasted%20image%2020250125182342.png)
 - One way it does this is using **IPTABLES** rules. In this case, it creates a rule on each node to forward traffic heading to the IP of the service, to the IP of the actual POD:
-  ![[Pasted image 20250125182504.png]]
+  ![09 kube proxy image 2](Images/Pasted%20image%2020250125182504.png)
 - That's how kube-proxy configures a service. We will discuss this later in the course.
 - To install kube-proxy is the same, run as a service.
 - With [[kubeadm]], it is deployed as a [[daemonset]], so it will be deployed on each node in the cluster.  

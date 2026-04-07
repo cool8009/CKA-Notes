@@ -6,7 +6,7 @@ tags:
 - They control access within the namespace you mentioned alone. 
 - But what about if you want to group non-namespaced resources like nodes? 
 - Resources are categorized as namespaced, or **cluster scoped**.
-- ![[Pasted image 20260117164549.jpg]]
+- ![15 Cluster Roles image 1](Images/Pasted%20image%2020260117164549.jpg)
 - For the cluster scoped resources, you don't specify a namespace upon creation.
 - `kubectl api-resources --namespaced=true/false` to view a full list of resources.
 - How do we auth users to cluster wide resources? 

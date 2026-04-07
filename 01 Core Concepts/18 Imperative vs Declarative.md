@@ -5,10 +5,10 @@ tags:
 ---
 - There are 2 approaches to managing resources in K8s, **imperative and declarative**.
 - Imperative includes the **HOW**, declarative is only specifying the desired state: the **WHAT**.
-	- ![[Pasted image 20250319212418.png]]
+	- ![18 Imperative vs Declarative image 1](Images/Pasted%20image%2020250319212418.png)
 - **apply** allows K8s to decide by itself what to do with the object, and how to bring it to the desired stated.
 - In the imperative approach, these commands are good for quick changes, or for the exam:
-	![[Pasted image 20250319212525.png]]
+	![18 Imperative vs Declarative image 2](Images/Pasted%20image%2020250319212525.png)
 - They are however **limited** in functionality. They are also only created once and forgotten, making it hard to recreate or manage large deployments.
 - With yaml files, we can store our processes and workflows, objects definitions and everything we need. This can be placed in git, and we can even created change approval and review process for them.
 - When running `kubectl edit`, the yaml is not the object's yaml, it's instead a representation of it in the K8s memory. Therefore, editing the file from the `edit` command **won't change the original manifest**. It's not really recorded anywhere.

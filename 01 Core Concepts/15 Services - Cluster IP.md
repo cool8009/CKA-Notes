@@ -20,7 +20,7 @@ aliases:
 - This allows us to easily and effectively deploy microservices.
 - Each layer, or tier, can move and scale as much as it needs to, without affecting other layers. Each pod can access a different layer by just accessing the service.
 - This service is known as a **Cluster IP**.
-	- ![[Pasted image 20250319201820.png]]
+	- ![15 Services Cluster IP image 1](Images/Pasted%20image%2020250319201820.png)
 - Use a service def file to create this service:
 
 ```

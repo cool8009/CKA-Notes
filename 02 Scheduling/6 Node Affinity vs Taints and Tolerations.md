@@ -3,7 +3,7 @@ tags:
   - scheduling
 aliases: []
 ---
-- ![[Pasted image 20250507214314.png]]
+- ![6 Node Affinity vs Taints and Tolerations image 1](Images/Pasted%20image%2020250507214314.png)
 - We have 3 nodes and 3 pods, each in 3 colors. The ultimate aim is to place the pods to the nodes with the correct colors, while preventing unwanted workloads from running on these dedicated nodes.
 - Let's first try to solve this problem with **taints and tolerations**:
 	- **Reminder:** Taints and tolerations are primarily used to repel pods from nodes unless they explicitly tolerate the taint, whereas node affinity is used to attract pods to nodes that satisfy specific label criteria.

@@ -19,9 +19,9 @@ aliases:
 - What if I plan to have a single POD? the RC can help by automatically bringing up a new POD when the existing one fails.
 - The RC ensures the specified amount of PODs is always running.
 - In the simple example from above, we have a single POD serving a set of users. When the load increases, an additional POD is created, and load is being balanced between the two:
-	![[Pasted image 20250317190715.png]]
+	![12 ReplicaSets image 1](Images/Pasted%20image%2020250317190715.png)
 - If the demand further increases, we can deploy an additional **node** with additional PODs, furthering the load balancing in the cluster:
-	![[Pasted image 20250317190810.png]]
+	![12 ReplicaSets image 2](Images/Pasted%20image%2020250317190810.png)
 
 - The RC spans across multiple nodes. It helps both balancing the load and scale the app when demand increases.
 - RC vs ReplicaSet:

@@ -54,7 +54,7 @@ spec:
 ```
 
 - There are 4 `updateMode` modes:
-  ![[Pasted image 20251223220506.png]]
+  ![13 Vertical Pod Autoscaler image 1](../05%20Cluster%20Maintenance/images/Pasted%20image%2020251223220506.png)
 - To inspect the resource recommendations provided by VPA for your deployment, run:
 
 ```

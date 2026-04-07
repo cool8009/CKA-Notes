@@ -46,7 +46,7 @@ ExecStart=/usr/local/bin/kubelet \\
 - POD name is automatically appended with the node name.
 - **But what is the use case for this?**
 	- Deploying control plane components as PODs on a node:
-	  ![[Pasted image 20250824094353.png]]
+	  ![10 Static Pods image 1](Images/Pasted%20image%2020250824094353.png)
 	- This way, you don't have to download the binaries, configure services, or worry about the services crashing, as kubelet will restart any crashed PODs. These run as container images and not binaries.
 	- This is how kubeadm does it. And this is why you see the control plane components as PODs when you set up that way.
 - ## Static Pods vs. DaemonSets

@@ -2,10 +2,10 @@
 tags:
   - security
 ---
-![[Pasted image 20251230225431.png]]
+![6 TLS In K8s image 1](Images/Pasted%20image%2020251230225431.png)
 
 - Certificate files follow specific naming conventions. Public key certificates typically have a .crt or .pem extension (e.g., server.crt, server.pem, client.crt, client.pem). In contrast, private keys usually include the word "key" in their file name or extension (e.g., server.key or server-key.pem). If a file name lacks "key," it is almost certainly a public key certificate.
-- ![[Pasted image 20251230225507.png]]
+- ![6 TLS In K8s image 2](Images/Pasted%20image%2020251230225507.png)
 - A Kubernetes cluster consists of master and worker nodes that require secure, encrypted communication. Whether the connection is being made by an administrator using the kubectl utility or directly interacting with the Kubernetes API, a secure TLS connection is essential. 
 - Additionally, services within the cluster use server certificates to secure their communications, while client certificates authenticate users or other cluster components.
 - ### Kubernetes Components and Their Certificates
@@ -41,7 +41,7 @@ Several components operate as clients and require authentication when connecting
 4. **Kube Proxy**  
     Handling network routing within the cluster, the kube proxy uses a client certificate (generally named `kube-proxy.crt` and `kube-proxy.key`) for secure communications with the API server.
 
-![[Pasted image 20251230231455.png]]
+![6 TLS In K8s image 3](Images/Pasted%20image%2020251230231455.png)
 ### Grouping Certificates for Enhanced Management
 
 For easier certificate management, you can group TLS certificates into two main categories:

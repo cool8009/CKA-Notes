@@ -49,7 +49,7 @@ rules:
   verbs: ["create"]
   resourceNames: ["blue", "orange"]
 ```
-- ![[Pasted image 20250922154351.png]] These are the rules from the yaml.
+- ![These are the rules from the yaml](Images/Pasted%20image%2020250922154351.png) These are the rules from the yaml.
 - These RBAC rules are enforced at the API level and determine which API operations a user can access.
 
 ## The Role of Admission Controllers
@@ -59,11 +59,11 @@ rules:
 	- Validating pod specifications (e.g., ensuring that images are not from a public Docker Hub registry or enforcing the prohibition of the "latest" tag).
 	- Rejecting pods running containers as the root user, or enforcing specific Linux capabilities.
 	- Ensuring required metadata like labels is included.
-	  ![[Pasted image 20250922154552.png]]
+	  ![14 Admissions Controllers (new 2025) image 2](Images/Pasted%20image%2020250922154552.png)
 
 
 - **Admissions Controllers** are a step after **authn & authz** in the request. Some come prebuilt in K8s:
-  ![[Pasted image 20250922154724.png]]
+  ![14 Admissions Controllers (new 2025) image 3](Images/Pasted%20image%2020250922154724.png)
 	 - **AlwaysPullImages:** Forces image pulling on each pod creation.
 	- **DefaultStorageClass:** Automatically assigns a default storage class to PVCs if none is specified.
 	- **EventRateLimit:** Limits the number of concurrent API server requests to prevent overload.

@@ -5,7 +5,7 @@ tags:
 - Let's try to understand rollouts and versioning in a deployment.
 - When you first create a deployment, K8s initiates what's called a **rollout**. This rollout creates a new ReplicaSet, which establishes the first **deployment revision** (Revision 1).
 - In the future, when the app is updated, a new rollout is triggered, and a new deployment revision named Revision 2 is subsequently created:
-  ![[Pasted image 20251005091822.png]]
+  ![1 Rolling Updates and Rollbacks image 1](Images/Pasted%20image%2020251005091822.png)
 - This helps us track deployments, and helps us roll back to a previous deployment if necessary.
 - To monitor and review these rollouts, you can use the following commands:
 
@@ -23,10 +23,10 @@ kubectl rollout history deployment/myapp-deployment
 
 - There are 2 types of **Deployment Strategies.**
 - For example, say you have 5 replicas of your webapp. You can destroy all of these and create 5 new ones:
-  ![[Pasted image 20251005092019.png]]
+  ![1 Rolling Updates and Rollbacks image 2](Images/Pasted%20image%2020251005092019.png)
   - A more seamless approach is the "**rolling update**" strategy. Here, instances are updated one at a time, ensuring continuous application availability throughout the process.
 
-- ![[Pasted image 20251005092046.png]]
+- ![1 Rolling Updates and Rollbacks image 3](Images/Pasted%20image%2020251005092046.png)
 
 - If no strategy is specified when creating a deployment, Kubernetes uses the rolling update strategy by default.
 - How do you actually update though? Update can mean many things: a new app version, different tags, changing the amount of replicas, etc.
@@ -129,7 +129,7 @@ Events:
 
 - **Under the hood**, when you trigger a deployment (ex. for 5 replicas), it first creates a ReplicaSet automatically, which in turn creates the # of pods required.
 - When you upgrade your app, the K8s deployment object creates a **new** ReplicaSet under the hood, and start deploying the container there, while at the same time taking down the old pods in a rolling update strat:
-  ![[Pasted image 20251005092639.png]]
+  ![1 Rolling Updates and Rollbacks image 4](Images/Pasted%20image%2020251005092639.png)
 - If you run `kubectl get replicasets`, you will be able to see this in action:
 
 ```

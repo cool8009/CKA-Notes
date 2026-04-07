@@ -21,7 +21,7 @@ openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt
 - For all other certificates going forward, we will use this CA key pair to sign them.
 - The CA is self signed with the private key we created - a self signed cert.
 - The CA certificate is the cornerstone of your certificate infrastructure, so ensure that you safeguard the private key.
-  ![[Pasted image 20260104183105.png]]
+  ![7 TLS in K8s Generating Certificates image 1](Images/Pasted%20image%2020260104183105.png)
 # 2.  Creating Client Certificates
 
 ## 2.1 Admin User Certificate

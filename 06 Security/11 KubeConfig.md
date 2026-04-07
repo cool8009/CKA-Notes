@@ -44,7 +44,7 @@ No resources found.
 
 
 - Typing this is a tedious task. We can move this information to a config file, and specify it in a command line option:
-  ![[Pasted image 20260106191311.png]]
+  ![11 KubeConfig image 1](Images/Pasted%20image%2020260106191311.png)
 - By default, `--kubeconfig` looks for a file called `config` in `~/.kube`.
 - Once properly set up, you can simply execute:
 
@@ -82,7 +82,7 @@ users:
 
 - In this configuration, the server specification for the "my kube playground" cluster is defined in the clusters section, the admin user’s credentials are listed in the users section, and the context named `my-kube-admin@my-kube-playground` ties them together. Multiple contexts can be created for different clusters and users, and you can set a default context using the `current-context` field.
 - **You are not configuring any users. You are just defining what users that already exist can access. **
-- ![[Pasted image 20260106191625.png]]
+- ![11 KubeConfig image 2](Images/Pasted%20image%2020260106191625.png)
 - The `--server my-server:6441` and `--certificate-authority ca.crt` goes into the "Clusters" section.
   The `--client-key admin.key`, `--client-certificate admin.crt`,  go to the "Users" section.
 - You then create a "Context" to tie the cluster to the user.

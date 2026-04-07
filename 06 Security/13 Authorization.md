@@ -65,9 +65,9 @@ Error from server (Forbidden): nodes "worker-2" is forbidden: User "developer" c
 	- Webhook Authorization
 
 -  We know that both users and kubelets access the API server.
-- The kubelet accesses the server for R/W operations. ![[Pasted image 20260110201612.jpg]]
+- The kubelet accesses the server for R/W operations. ![The kubelet accesses the server for R/W operations](Images/Pasted%20image%2020260110201612.jpg)
 - Requests from kubelets—typically using certificates with names prefixed by "system: node" as part of the `system:nodes` group—are authorized by a special component known as the **node authorizer**. The following diagram explains the authorization process for kubelet requests:
-- ![[Pasted image 20260110201645.jpg]]
+- ![13 Authorization image 2](Images/Pasted%20image%2020260110201645.jpg)
 - This is an example of **node authorization.** Access from within the cluster, via the `system:node` prefix in the cert CN (common name).
 - **An example of ABAC (attribute based authz):**
 	- ABAC associates a user or a group a set of permissions.
@@ -86,7 +86,7 @@ Error from server (Forbidden): nodes "worker-2" is forbidden: User "developer" c
 - **An example of RBAC:**
 	- Instead of directly associating a user or a group a set of perms, we define a **role**.
 	- The role has a set of perms, and we assign all the relevant people to that role.
-	- ![[Pasted image 20260110201949.jpg]]
+	- ![13 Authorization image 3](Images/Pasted%20image%2020260110201949.jpg)
 	- RBAC is considered the standard method for managing access within a Kubernetes cluster. The diagram below provides a visual representation of RBAC across different roles.
 	- For example, you can create a "developer" role that encompasses only the necessary permissions for application deployment. Developers are then associated with this role, and modifications in user access can be handled by updating the role, affecting all associated users immediately.
 

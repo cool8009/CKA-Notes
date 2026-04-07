@@ -38,8 +38,8 @@ This article focuses on two main API group categories:
 2. **Named API Groups:**  `/apis`
     Provides an organized structure for newer features. These groups include apps, extensions, networking, storage, authentication, and authorization. For example, under the apps group, you’ll find Deployments, ReplicaSets, and StatefulSets, whereas the networking group hosts resources such as Network Policies. Certificate-related resources like Certificate Signing Requests are also grouped under their relevant named groups.
 
-- ![[Pasted image 20260106212615.jpg]]
-- ![[Pasted image 20260106212622.jpg]]
+- ![12 API Groups image 1](Images/Pasted%20image%2020260106212615.jpg)
+- ![12 API Groups image 2](Images/Pasted%20image%2020260106212622.jpg)
 - Each of these  resources has a set of actions associated with them.
 - The K8s docs can tell you what API group for each object.\
 - To retrieve the list of available API groups, access the API server's root endpoint on port 6443:

@@ -48,6 +48,6 @@ spec:
 - Then you can also do a **wordcount** which is a linux util that will count words or lines (with the -l flag):
   `kubectl get pods --selector env=dev | wc -l`
 - But because the output will contain a header to the table as well, we need to get rid of the header:
-  ![[Pasted image 20250730222700.png]]
+  ![2 Labels and Selectors image 1](Images/Pasted%20image%2020250730222700.png)
 - So we can use:
   `kubectl get pods --selector env=dev --no-headers | wc -l`

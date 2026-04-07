@@ -10,4 +10,4 @@ The purpose of Kubernetes is to manage and host your containers in an automated 
 - [[08 kubelet]] is the captain of a [[22 worker node]]. Every ship (worker node) has a captain, which manages all operations on the [[worker nodes]], incl. but not limited to: managing existing containers, loading new ones, relaying info to the master ([[04 kube-api]] and [[control plane]]). It's basically an agent that runs on the nodes. The [[04 kube-api]] server periodically fetches status updates from the [[08 kubelet]].
 - [[09 kube-proxy]] is a service that runs on the [[22 worker node]], which allows different nodes and different services (like an application that needs to talk to a DB) to talk to each other.
 
-![[Pasted image 20250125150243.png]]![[Pasted image 20250125150301.png]]
+![00 Cluster Architecture image 1](Images/Pasted%20image%2020250125150243.png) ![00 Cluster Architecture image 2](Images/Pasted%20image%2020250125150301.png)

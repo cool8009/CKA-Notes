@@ -14,7 +14,7 @@ aliases:
 - K8s is highly extensible - you can write your own custom scheduler and deploy it, and use it either as a default scheduler or in addition to the default one.
 - When creating a POD or a dep, you can instruct K8s to schedule pods with a specific scheduler:
   
-- ![[Pasted image 20250826083722.png]]
+- ![12 Multiple Schedulers image 1](Images/Pasted%20image%2020250826083722.png)
 - Different schedulers need different names. The default schedulers name is `default-scheduler` and it's configured in `shceduler-config.yaml`.
 - We create a separate config file for our schedulers and set the name like this:
   Below are examples of configuration files for both the default and a custom scheduler. Each YAML file uses a profiles list to define the scheduler's name.

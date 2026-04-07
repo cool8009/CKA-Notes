@@ -27,7 +27,7 @@ aliases:
 - If you don't specify this field, K8s will add it automatically.
 - The scheduler looks through all the PODs, and looks for those that don't have this property set.
 - When it finds them, those are the candidates for scheduling.
-- ![[Pasted image 20250324203039.png]]
+- ![1 Manual Scheduling image 1](Images/Pasted%20image%2020250324203039.png)
 - If there's not scheduler, PODs won't be assigned and will be stuck in a Pending state. To fix this, you can manually set the `nodeName` field to the name of the node you want to schedule the [[10 POD]] on. The POD then gets assigned to the specified node.
 - You can do it only at creation time. 
 - What happens if the POD is already created? K8s won't allow you to modify the property.

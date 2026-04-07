@@ -90,7 +90,7 @@ spec:
     - secretRef:
         name: app-secret
 ```
-![[Pasted image 20251130230434.png]]
+![6 Secrets image 1](Images/Pasted%20image%2020251130230434.png)
 ### Mounting Secrets as Files
 
 Alternatively, mount the Secret as files within a volume. Each key in the Secret becomes a separate file:

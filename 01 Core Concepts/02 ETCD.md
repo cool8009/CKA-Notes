@@ -39,7 +39,7 @@ aliases:
 - [[kubeadm]] deploys etcd as a pod in the kube-system [[namespace]]. 
 - the `--advertise-client-urls` option in `etcd.service` is where [[02 ETCD]] is listening on. This is the url you later set up on your worker nodes.
 - etcd stores k8s data in a specific structure:
-  ![[Pasted image 20250125162609.png]]
+  ![02 ETCD image 1](Images/Pasted%20image%2020250125162609.png)
 - In a HA environment, because you have multiple master nodes and therefore multiple etcd clusters, you need to specify the `--initial-cluster controller-0={urltocontroller0}:2380 {urltocontroller1}:2380` in `etcd.service`
   This will ensure that the different etcd instances will know about each other.
 - 
