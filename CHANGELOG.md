@@ -18,6 +18,22 @@
   - detailed execution log and handoff document
 - `final_repo_update_report.md`
   - concise final cross-phase summary
+- `00 - CKA Notes Map.md`
+  - root navigation page linking all major study chapters
+- `01 Core Concepts/00 - Core Concepts Map.md`
+  - chapter main page for the core concepts chapter
+- `02 Scheduling/00 - Scheduling Map.md`
+  - chapter main page for the scheduling chapter
+- `03 Logging and Monitoring/00 - Logging and Monitoring Map.md`
+  - chapter main page for the logging and monitoring chapter
+- `04 Application Lifecycle Management/00 - Application Lifecycle Management Map.md`
+  - chapter main page for the application lifecycle chapter
+- `05 Cluster Maintenance/00 - Cluster Maintenance Map.md`
+  - chapter main page for the cluster maintenance chapter
+- `06 Security/00 - Security Map.md`
+  - chapter main page for the security chapter
+- `Exam Tips/00 - Exam Tips Map.md`
+  - chapter main page for the exam tips chapter
 - `01 Core Concepts/19 Control Plane.md`
   - new bridge note for control-plane references
 - `05 Cluster Maintenance/00 kubeadm.md`
@@ -28,6 +44,8 @@
   - dry-run/apply migration script for local image embeds
 - `scripts/analyze_internal_links.py`
   - internal wikilink analyzer and weak-note detector
+- `scripts/build_chapter_maps.py`
+  - dry-run/apply generator for the root map and chapter map pages
 
 ### Changed
 
@@ -60,6 +78,7 @@ Files updated in Phase 2:
 - Expanded the existing `nodes` and `worker node` placeholders into useful link targets.
 - Improved note-to-note progression between foundational concepts, scheduling topics, security topics, maintenance topics, and autoscaling topics.
 - Avoided bulk overlinking, file renames, and broad rewrites.
+- Added a root map plus one chapter main page per top-level study chapter to mirror the navigation pattern used in the Hebrew trading vault.
 
 Files updated in Phase 3:
 
