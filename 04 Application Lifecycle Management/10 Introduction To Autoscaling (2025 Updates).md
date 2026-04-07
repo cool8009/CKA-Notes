@@ -4,6 +4,7 @@ tags:
 ---
 - Horizontal Pod Autoscaling (HPA)
 - Vertical (VPA)
+- This note branches into [[11 Horizontal Pod Autoscaler]], [[13 Vertical Pod Autoscaler]], and [[12 In Place Pod Resizing]].
 - This is vast topic and we have an entire course on autoscaling, but in the CKA it will light.
 - Before diving into autoscaling in Kubernetes, let’s review the traditional concepts of scaling using physical servers.
 

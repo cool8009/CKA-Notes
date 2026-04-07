@@ -6,6 +6,7 @@ aliases:
 - In this lesson, we take an in-depth look at Admission Controllers in Kubernetes—covering both validating and mutating functions—and learn how to configure custom Admission Controllers.
 - Understanding these controllers is essential for ensuring that Kubernetes objects are created and modified correctly.
 - We looked at the `NamespaceExists` AC. It helps validate if a namespace alr. exists, and reject the req if it doesn't. This is known as a **validating AC**.
+- This note continues directly from [[14 Admissions Controllers (new 2025)|Admission Controllers]].
 - The `DefaultStorageClass` plugin.
 - The default storage class admission controller is enabled by default. When you create a PersistentVolumeClaim (PVC) without specifying a storage class, the request is authenticated, authorized, and then passed through the admission controller. This controller mutates the request by adding the default storage class if none is provided.
 
@@ -40,13 +41,13 @@ spec:
   storageClassName: default
 ```
 
-![[Pasted image 20250922170641.png]]
+![15 Validating Admission Controllers (new 2025) image 1](Images/Pasted%20image%2020250922170641.png)
 
 - This is a **Mutating Admission Controllers:** Modify the object (mutate the request) before it is created.
 - There is also **Dual-Purpose Controllers:** Some controllers support both mutating and validating functions.
 - Generally, mutiating ACs are invoked **first**, before validating ACs. This is so every change the mutating AC has made, can be considered by the validating AC.
 - For example, if the namespace auto-provisioning admission controller (mutating) runs before the namespace existence admission controller (validating), the missing namespace is created, preventing potential validation failures:
-  ![[Pasted image 20250922170847.png]]
+  ![15 Validating Admission Controllers (new 2025) image 2](Images/Pasted%20image%2020250922170847.png)
 
 ## What if we want our own AC?
 
@@ -88,7 +89,7 @@ spec:
 ```
 
 - If the "allowed" field is false, the request is rejected.
-- ![[Pasted image 20250922171347.png]]An illustration of the process.
+- ![An illustration of the process](Images/Pasted%20image%2020250922171347.png) An illustration of the process.
 - To start using webhooks, deploy your custom webhook server. This server handles your custom logic for mutating and/or validating requests. You can implement the server in any language that supports processing JSON admission review objects.
 - Example impl.:
   Below is a sample snippet in Go that demonstrates setting up a webhook server:
@@ -206,7 +207,7 @@ if __name__ == '__main__':
 
 Once your webhook server is deployed, configure Kubernetes to route requests to your service by creating a webhook configuration object. 
 This is in case you run your webhook service in a POD in the cluster, and created a service for it so it can be accessed:
-![[Pasted image 20250922172232.png]]
+![15 Validating Admission Controllers (new 2025) image 4](Images/Pasted%20image%2020250922172232.png)
 For instance, the following example shows a [ValidatingWebhookConfiguration] that validates pod creation:
 
 ```

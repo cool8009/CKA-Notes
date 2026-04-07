@@ -5,11 +5,12 @@ aliases:
   - static pod
   - static pods
 ---
-- What happens if we don't have a control plane?
-- No kube-api, no scheduler, no nothing
+- What happens if we don't have a [[19 Control Plane|control plane]]?
+- No [[04 kube-api]], no [[07 kube-scheduler|scheduler]], no nothing
 - We literally have a node, on its own, without any "connection to the outside world"
-- How can we create PODs on said node, that only has a kubelet on it?
+- How can we create PODs on said node, that only has a [[08 kubelet]] on it?
 - We know that we need a **pod definition file** to create a POD.
+- This is still the same manifest structure described in [[11 PODs as YAML]].
 - If we take a POD def file, and place it in the following dir on a node, the kubelet will create it:
   `/etc/kubernetes/manifests`
 - kubelet will monitor this directory and create PODs based on the manifests.
@@ -33,7 +34,7 @@ ExecStart=/usr/local/bin/kubelet \\
 ```
 
 - Or you can provide a config file with the `--config=kubeconfig.yaml` and provide the `staticPodPath: /etc/kubernetes/manifests` param in the config.
-- Clusters set up with kubeadm use this approach.
+- Clusters set up with [[00 kubeadm|kubeadm]] use this approach.
 - **Catch:**
 	  - To view the static POD, use the `docker ps ` command or the relevant command for your runtime. 
 	  - We can't use `kubectl` as we don't have the rest of the control plane, and this command works with the kube-api.
@@ -45,8 +46,8 @@ ExecStart=/usr/local/bin/kubelet \\
 	  - You can't edit or delete them via kube-api server (aka kubectl). Only by modifying the files in the manifests folder.
 - POD name is automatically appended with the node name.
 - **But what is the use case for this?**
-	- Deploying control plane components as PODs on a node:
-	  ![[Pasted image 20250824094353.png]]
+	- Deploying [[19 Control Plane|control plane]] components as PODs on a node:
+	  ![10 Static Pods image 1](Images/Pasted%20image%2020250824094353.png)
 	- This way, you don't have to download the binaries, configure services, or worry about the services crashing, as kubelet will restart any crashed PODs. These run as container images and not binaries.
 	- This is how kubeadm does it. And this is why you see the control plane components as PODs when you set up that way.
 - ## Static Pods vs. DaemonSets
@@ -60,3 +61,4 @@ A common question that arises is how static pods differ from DaemonSets. The tab
 | Use Case                   | Typically used for critical control plane components | Ensures a copy of a pod runs on every node                 |
 | Interaction with Scheduler | Ignored by the kube-scheduler                        | Ignored by the kube-scheduler                              |
 
+- Compare this with [[8 DaemonSets]] when you need one pod per node but still want API-server-backed management.

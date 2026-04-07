@@ -2,7 +2,7 @@
 tags:
   - security
 ---
-- We talked about Authn. 
+- We talked about [[3 Authentication|Authn]]. 
 - We saw how to get access to the cluster: certs, CAs etc.
 - But once you get access, WHAT can you do?
 - Once a user gains access, authorization ensures they only have the appropriate permissions for their role. For example, a cluster administrator can view various objects such as Pods, Nodes, and Deployments:
@@ -65,9 +65,9 @@ Error from server (Forbidden): nodes "worker-2" is forbidden: User "developer" c
 	- Webhook Authorization
 
 -  We know that both users and kubelets access the API server.
-- The kubelet accesses the server for R/W operations. ![[Pasted image 20260110201612.jpg]]
+- The kubelet accesses the server for R/W operations. ![The kubelet accesses the server for R/W operations](Images/Pasted%20image%2020260110201612.jpg)
 - Requests from kubelets—typically using certificates with names prefixed by "system: node" as part of the `system:nodes` group—are authorized by a special component known as the **node authorizer**. The following diagram explains the authorization process for kubelet requests:
-- ![[Pasted image 20260110201645.jpg]]
+- ![13 Authorization image 2](Images/Pasted%20image%2020260110201645.jpg)
 - This is an example of **node authorization.** Access from within the cluster, via the `system:node` prefix in the cert CN (common name).
 - **An example of ABAC (attribute based authz):**
 	- ABAC associates a user or a group a set of permissions.
@@ -83,10 +83,10 @@ Error from server (Forbidden): nodes "worker-2" is forbidden: User "developer" c
 	
 	- Each time security requirements change, you must manually update this policy file and restart the Kube API Server. This manual process can be tedious and set the stage for more streamlined methods such as Role-Based Access Control (RBAC).
 
-- **An example of RBAC:**
+- **An example of [[14 RBAC|RBAC]]:**
 	- Instead of directly associating a user or a group a set of perms, we define a **role**.
 	- The role has a set of perms, and we assign all the relevant people to that role.
-	- ![[Pasted image 20260110201949.jpg]]
+	- ![13 Authorization image 3](Images/Pasted%20image%2020260110201949.jpg)
 	- RBAC is considered the standard method for managing access within a Kubernetes cluster. The diagram below provides a visual representation of RBAC across different roles.
 	- For example, you can create a "developer" role that encompasses only the necessary permissions for application deployment. Developers are then associated with this role, and modifications in user access can be handled by updating the role, affecting all associated users immediately.
 
@@ -145,3 +145,4 @@ Error from server (Forbidden): nodes "worker-2" is forbidden: User "developer" c
 	
 	- **When multiple modes are configured, each request is processed sequentially in the order specified.** For example, a user’s request is first evaluated by the node authorizer. If the request does not pertain to node-specific actions and is consequently denied, it is then passed to the next module, such as RBAC. Once a module approves the request, further checks are bypassed and the user is granted access.
 	- **For each request, the authz is determined by the order of the types of authz modes. If a request fails, the next authz mode is checking the request, until it is succesful.**
+- In practice, the most exam-relevant follow-ups here are [[14 RBAC]] and [[15 Cluster Roles]].

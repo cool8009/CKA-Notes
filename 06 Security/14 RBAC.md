@@ -64,6 +64,7 @@ kubectl create -f devuser-developer-binding.yaml
 ```  
 
 - **Roles and RBs fall under the scope of namespaces.**
+- This is the namespaced counterpart to [[15 Cluster Roles]].
 - If you want to limit namespaces, specify the `namespace` field under the `metadata` section in the RB definition file.
 - After applying your configurations, it's important to verify that the roles and role bindings have been created correctly.
 
@@ -173,10 +174,11 @@ kubectl auth can-i create pods --as dev-user
 ```
 
 - You can also specify a namespace in your commands to verify permissions scoped to that particular namespace.
+- RBAC is the default authorization model discussed in [[13 Authorization]].
 
 - A note on resource names: 
   - You can go one level down from a Role and give access to a specific resource/s:
-    ![[Pasted image 20260110203411.png]]
+    ![14 RBAC image 1](Images/Pasted%20image%2020260110203411.png)
   - In some scenarios, you may want to restrict user access to a select group of resources. For example, if you have multiple pods in a namespace but only intend to provide access to pods named "blue" and "orange," you can utilize the `resourceNames` field in the role rule.
 
 - Start with a basic role definition without any resource-specific restrictions:

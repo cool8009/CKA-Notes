@@ -4,6 +4,7 @@ tags:
 ---
 - Diff tools available: easyrsa, openssl, cfssl etc.
 - We will use OpenSSL.
+- This is the hands-on continuation of [[00 Certificates]] and [[6 TLS In K8s]].
 # 1. Generating CA Certificates
 
 	First, create the Certificate Authority (CA) certificates. The process involves generating a private key, creating a Certificate Signing Request (CSR) that includes the CA's common name, and finally signing the CSR with the private key to produce the CA certificate. The completed process provides the CA with its private key (`ca.key`) and root certificate (`ca.crt`), which are essential for subsequently signing other certificates.
@@ -21,7 +22,7 @@ openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt
 - For all other certificates going forward, we will use this CA key pair to sign them.
 - The CA is self signed with the private key we created - a self signed cert.
 - The CA certificate is the cornerstone of your certificate infrastructure, so ensure that you safeguard the private key.
-  ![[Pasted image 20260104183105.png]]
+  ![7 TLS in K8s Generating Certificates image 1](Images/Pasted%20image%2020260104183105.png)
 # 2.  Creating Client Certificates
 
 ## 2.1 Admin User Certificate
@@ -68,7 +69,7 @@ curl https://kube-apiserver:6443/api/v1/pods \
 }
 ```
 
-- Most Kubernetes clients can load these connection parameters via a kubeconfig file that consolidates the information required to reach the API server. We will at it in depth later.
+- Most Kubernetes clients can load these connection parameters via a [[11 KubeConfig|kubeconfig file]] that consolidates the information required to reach the API server. We will at it in depth later.
 
 ![The image illustrates a diagram of client certificates for Kubernetes components, including admin, scheduler, controller-manager, kube-proxy, and kubelet, with associated keys and certificates.](https://kodekloud.com/kk-media/image/upload/v1752869973/notes-assets/images/CKA-Certification-Course-Certified-Kubernetes-Administrator-TLS-in-Kubernetes-Certificate-Creation/frame_260.jpg)
 

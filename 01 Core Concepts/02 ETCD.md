@@ -26,20 +26,20 @@ aliases:
 - It stores a bunch of info about different things such as:
   - [[20 nodes]]
   - [[10 POD]]s
-  - [[Configs]]
-  - [[Secrets]]
-  - [[Accounts]]
-  - [[Roles]]
-  - [[Binding]]
+  - [[5 Configure ConfigMaps in Applications|ConfigMaps]]
+  - [[6 Secrets]]
+  - [[16 Service Accounts|Service Accounts]]
+  - [[14 RBAC|Roles]]
+  - [[14 RBAC|RoleBindings]]
   - and more
 - Every change you make to a cluster are updated on the [[02 ETCD]] server.
 - Only once it is updated, change is considered complete.
-- Depending on your setup, from scratch or with [[kubeadm]], [[02 ETCD]] is deployed differently.
+- Depending on your setup, from scratch or with [[00 kubeadm|kubeadm]], [[02 ETCD]] is deployed differently.
 - If you deploy from scratch, you download and install [[02 ETCD]] by yourself, and configure it.
-- [[kubeadm]] deploys etcd as a pod in the kube-system [[namespace]]. 
+- [[00 kubeadm|kubeadm]] deploys etcd as a pod in the kube-system [[17 Namespaces|namespace]]. 
 - the `--advertise-client-urls` option in `etcd.service` is where [[02 ETCD]] is listening on. This is the url you later set up on your worker nodes.
 - etcd stores k8s data in a specific structure:
-  ![[Pasted image 20250125162609.png]]
+  ![02 ETCD image 1](Images/Pasted%20image%2020250125162609.png)
 - In a HA environment, because you have multiple master nodes and therefore multiple etcd clusters, you need to specify the `--initial-cluster controller-0={urltocontroller0}:2380 {urltocontroller1}:2380` in `etcd.service`
   This will ensure that the different etcd instances will know about each other.
 - 

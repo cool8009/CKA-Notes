@@ -3,7 +3,8 @@ tags:
   - security
 ---
 - 2 types of accs in K8s - **service account and user accounts.**
-- ![[Pasted image 20260117165747.jpg]]
+- Service accounts are the non-human identity side of [[3 Authentication]].
+- ![16 Service Accounts image 1](Images/Pasted%20image%2020260117165747.jpg)
 - Consider an example: "my Kubernetes dashboard," a basic dashboard application built with Python. 
 - This application retrieves a list of Pods from a Kubernetes cluster by sending API requests and subsequently displays the results on a web page. To authenticate its API requests, the application uses a dedicated service account.
 
@@ -75,7 +76,7 @@ curl https://192.168.56.70:6443/api -k \
 
 - By default, K8s creates an SA called `default`.
 - When a pod is created, the default SA is automatically attached to it:
-  ![[Pasted image 20260117170112.png]]
+  ![16 Service Accounts image 2](Images/Pasted%20image%2020260117170112.png)
 - The SA gets mounted as a **projected volume**, like a dynamic dir created inside the pod by K8s.
 - This token is typically available at the path: `/var/run/secrets/kubernetes.io/serviceaccount`.
 - You must create a custom SA if you don't want the default one, like desc. Above.
@@ -161,6 +162,8 @@ spec:
 ```
 Or use the same param in the SA definition file to make it SA wide.
 
+- Permissions for these accounts are typically granted with [[14 RBAC]] or [[15 Cluster Roles]].
+
 
 **What if you want to create a token to be used outside a cluster?**
 - In such cases, you can run:
@@ -194,7 +197,7 @@ type: kubernetes.io/service-account-token
 - **Enhanced Security:** Since Kubernetes v1.22, tokens are generated using the TokenRequest API, making them audience-bound, time-bound, and more secure.
 - **Kubernetes v1.24 Changes:** With v1.24, Kubernetes no longer provisions non-expiring tokens automatically via Secrets; use the `kubectl create token` command to generate tokens as needed.
 
-![[Pasted image 20260117171050.png]]
+![16 Service Accounts image 3](Images/Pasted%20image%2020260117171050.png)
 
 
 ****

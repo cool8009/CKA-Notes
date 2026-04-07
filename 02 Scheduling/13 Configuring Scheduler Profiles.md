@@ -24,7 +24,7 @@ spec:
           cpu: 10
 ```
 
-- Before using this priority, you must create a priority class with a specific name and a priority value. Assigning a value like 1,000,000, for example, grants a very high priority. This ensures that pods with higher priorities are scheduled ahead of those with lower ones.
+- Before using this priority, you must create a [[11 Priority Classes|priority class]] with a specific name and a priority value. Assigning a value like 1,000,000, for example, grants a very high priority. This ensures that pods with higher priorities are scheduled ahead of those with lower ones.
 - After being queued, pods progress through several phases:
 
 	1. **Filter Phase:** Nodes that cannot meet the pod's resource requirements (e.g., nodes lacking 10 CPUs) are filtered out.
@@ -49,7 +49,7 @@ spec:
 	    Lease:
 	    ```
 
-  - ![[Pasted image 20250922151859.png]]
+  - ![13 Configuring Scheduler Profiles image 1](Images/Pasted%20image%2020250922151859.png)
 
 - Each phase has **extension points**, which are places where functionality can be extended. These are where the aforementioned plugins, are plugged to.
 - These are the various extension poins of the scheduler, including processes like the scheduling queue, filtering, scoring, and binding phases:

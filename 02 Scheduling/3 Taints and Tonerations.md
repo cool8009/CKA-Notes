@@ -10,7 +10,7 @@ aliases:
 - An analogy: 
   A bug approaches the person. To prevent the bug from landing on the person, we spray the bug with a repellent spray, **a Taint.**
 - The bug is **intolerant** to the person. However, there might be other bugs that **are tolerant.** The taint **doesn't affect them.**
-- ![[Pasted image 20250409125255.png]]
+- ![3 Taints and Tonerations image 1](Images/Pasted%20image%2020250409125255.png)
   - 2 things decide if a bug can land on a person: the persons taint, and the bugs toleration to that taint.
   - In the analogy, the bug is a POD and the person is a Node.
   - They are used to set restrictions on what pods can be scheduled on what nodes.
@@ -19,7 +19,7 @@ aliases:
   - First we prevent all PODs from being placed on node 1 by placing a taint on the node.
   - By default pods have **no tolerations**. This means that at this point, no pods will be placed on node 1, as none of them can tolerate the taint.
   - Second, we specify which pods we want to be able to be placed on the tainted node, so we specify a toleration for pod D.
-  - ![[Pasted image 20250428084106.png]]
+  - ![3 Taints and Tonerations image 2](Images/Pasted%20image%2020250428084106.png)
   - **Taints are set on nodes. Tolerations are set on [[10 POD]]**
   - Use:
     `kubectl taint nodes node-name key=value:taint-effect`

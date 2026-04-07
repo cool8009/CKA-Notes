@@ -6,7 +6,7 @@ tags:
 - Kubernetes does not manage human user accounts natively. 
 - Instead, it relies on external systems such as static files containing user credentials, certificates, or third-party identity services (e.g., file with user details, certs, LDAP, Kerberos) for authentication. 
 - Every request—whether from the kubectl command-line tool or direct API calls—is processed by the Kubernetes API server, which authenticates the incoming requests using one or more available authentication mechanisms.
-- You can't create users or view a list of them. It's always outside. Service accounts can be managed though (more later).
+- You can't create users or view a list of them. It's always outside. [[16 Service Accounts|Service accounts]] can be managed though (more later).
 - For this, we'll focus on users.
 - All user access is managed by the API server. 
 - The most basic way to ID yourself is by using a csv file:
@@ -61,4 +61,4 @@ curl -v -k https://master-node-ip:6443/api/v1/pods --header "Authorization: Bear
 - This is a regular Bearer token.
 - These approaches suck though.
 - If you are configuring your cluster using kubeadm, ensure that you update the API server pod definition to mount the authentication file as a volume and then restart the API server. After authentication is in place, 
-- implement authorization (e.g., role-based access control) to ensure correct user permissions within the cluster.
+- implement [[13 Authorization|authorization]] (for example [[14 RBAC|role-based access control]]) to ensure correct user permissions within the cluster.

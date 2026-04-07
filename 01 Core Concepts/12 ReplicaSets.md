@@ -19,9 +19,9 @@ aliases:
 - What if I plan to have a single POD? the RC can help by automatically bringing up a new POD when the existing one fails.
 - The RC ensures the specified amount of PODs is always running.
 - In the simple example from above, we have a single POD serving a set of users. When the load increases, an additional POD is created, and load is being balanced between the two:
-	![[Pasted image 20250317190715.png]]
+	![12 ReplicaSets image 1](Images/Pasted%20image%2020250317190715.png)
 - If the demand further increases, we can deploy an additional **node** with additional PODs, furthering the load balancing in the cluster:
-	![[Pasted image 20250317190810.png]]
+	![12 ReplicaSets image 2](Images/Pasted%20image%2020250317190810.png)
 
 - The RC spans across multiple nodes. It helps both balancing the load and scale the app when demand increases.
 - RC vs ReplicaSet:
@@ -51,7 +51,7 @@ aliases:
 							 - name: nginx-container
 							 image: nginx
 		replicas: 3
-- Basically, it's like any K8s object yaml. We define a POD definition in the `template` section, note the indentation and not passing apiVersion and kind.
+- Basically, it's like any K8s object yaml. We define a [[10 POD]] definition in the `template` section, note the indentation and not passing apiVersion and kind.
 - Also, mention replication amount under `replicas`
 - `kubectl create -f rc-filename.yaml`
 - `kubectl get replicationcontroller`
@@ -68,9 +68,10 @@ aliases:
 - `kubectl get replicatset`
 - **Why do we label our objects in the first place?**
 - Consider we have 3 PODs not created by an RS. The RS can still monitor them and create new ones if some fail, to achieve a desired state. The RS is more like a process that monitors the PODs.
-- The RS knows what PODs to monitor via the **labels**. We can provide these labels under the `selector` section.
+- The RS knows what PODs to monitor via the **labels**. We can provide these labels under the `selector` section, just like in [[2 Labels and Selectors]].
 - Scaling the RS has multiple options:
 		- Update the .yaml and run `kubectl replace -f` 
 		- `kubectl scale --replicas=6 -f rs.yaml`
 		- `kubectl scale --replicas=6 replicaset rs` TYPE param, NAME param 
 - **Deleting the RS will also delete all underlying PODs.**
+- The next abstraction on top of ReplicaSets is the [[13 Deployments|Deployment]].

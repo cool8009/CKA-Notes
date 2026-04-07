@@ -2,7 +2,8 @@
 tags:
   - security
 ---
-- This article explains how to manage certificates and introduces the Certificate API in Kubernetes.
+- This article explains how to manage [[00 Certificates|certificates]] and introduces the Certificate API in Kubernetes.
+- The control-plane component responsible for CSR approval and signing here is the [[06 Controller-Manager|Controller Manager]].
 - In a typical cluster setup, an administrator first configures a Certificate Authority (CA) server and generates certificates for the various components.   
 - Once the services are launched with these certificates, the cluster becomes operational. 
 - Initially, only one administrator has access via a personal admin certificate and key. However, as new team members join, each must obtain their own certificate and key pair to access the cluster.

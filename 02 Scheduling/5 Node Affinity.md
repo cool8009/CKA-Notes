@@ -5,6 +5,7 @@ aliases:
   - Affinity
   - affinity
   - Node Affinity
+  - node affinity
 ---
 - Node Affinity is more advanced scheduling solution that goes a step further than [[4 Node Selectors]].
 - Node affinity enables advanced ways to limit or enable pod placement on specific nodes.
@@ -79,7 +80,7 @@ aliases:
 
 ---
 
-- ![[Pasted image 20250504231323.png]]
+- ![5 Node Affinity image 1](Images/Pasted%20image%2020250504231323.png)
 - There are two primary scheduling behaviors for node affinity:
 
 1. **Required During Scheduling, Ignored During Execution**
@@ -91,9 +92,11 @@ aliases:
     - The scheduler prefers nodes that meet the affinity rules but will place the pod on another node if no matching nodes are available.
 
 **There are also 2 new types expected in the future that introduce a difference in the DuringExecution phase. In this model, if a node's labels change after a pod is running and no longer meet the affinity criteria, the pod would be evicted.**
-![[Pasted image 20250504231418.jpg]]
+![5 Node Affinity image 2](Images/Pasted%20image%2020250504231418.jpg)
 
 **Summary**
+
+- See [[6 Node Affinity vs Taints and Tolerations]] for the practical comparison with [[3 Taints and Tonerations|taints and tolerations]].
 
 Node affinity empowers you to define sophisticated scheduling rules for pod placement based on node labels. Key takeaways include:
 

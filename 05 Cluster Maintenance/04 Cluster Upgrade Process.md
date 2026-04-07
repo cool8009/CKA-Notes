@@ -2,6 +2,7 @@
 tags:
   - maintenance
 ---
+- This note builds directly on [[03 K8s Releases]] and usually uses [[00 kubeadm|kubeadm]].
 - We saw how K8s manages it's software releases.
 - ETCD and COREDNS have separate versions, detached from the k8s version.
 - The rest of the components don't need to have the same version.
@@ -16,7 +17,7 @@ tags:
 
 - The controller manager and scheduler can run on version 1.10 or 1.9.
 - The Kubelet and Kube Proxy can run on version 1.8. Running any component on a version higher than the API Server (e.g., 1.11 when the API Server is 1.10) is not recommended.
-- ![[Pasted image 20251225115505.png]]
+- ![04 Cluster Upgrade Process image 1](images/Pasted%20image%2020251225115505.png)
 - The Kube Control utility is an exception and may run on a version that is higher, lower, or the same as the API Server. This flexibility supports live, rolling upgrades where components can be upgraded individually.
 - ## When to Upgrade
 
@@ -45,7 +46,7 @@ tags:
 - A list of control plane components along with their current versions and the target upgrade versions.
 - Remember that after upgrading the control plane components, you must manually upgrade the kubelet on each node—kubeadm does not manage kubelet upgrades. 
 - Also, the kubeadm tool itself should be upgraded before initiating the cluster upgrade.
-- ![[Pasted image 20251225120847.png]]
+- ![04 Cluster Upgrade Process image 2](images/Pasted%20image%2020251225120847.png)
 - You can only go one minor version at a time. So from 1.11 to 1.12.
 ```
 apt-get upgrade -y kubeadm=1.12.0-00

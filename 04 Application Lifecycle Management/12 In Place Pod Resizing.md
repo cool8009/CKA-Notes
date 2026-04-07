@@ -3,6 +3,7 @@ tags:
   - ALM
 ---
 - You can resize pods in place.
+- Think of this as the manual or feature-gated counterpart to [[13 Vertical Pod Autoscaler]].
 - As of K8s 1.3.2 if you change resource req. of a pod while its alive, K8s will delete the pod and spin up a new one, therefore it doesn't happen in place.
 - This can be disruptive for stateful workloads.
 - In Place Resizing is a feature in progress, and is in alpha. 

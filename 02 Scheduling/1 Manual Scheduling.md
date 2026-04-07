@@ -5,7 +5,7 @@ aliases:
   - manual scheduling
   - Manual Scheduling
 ---
-- What if we don't have a scheduler in our cluster? We probably don't want to rely on a built in one, and do it manually.
+- What if we don't have a [[07 kube-scheduler|scheduler]] in our cluster? We probably don't want to rely on a built in one, and do it manually.
 - 
 - POD manifest files have an extra property we can provide called `nodeName`:
 ```
@@ -25,9 +25,9 @@ aliases:
 		nodeName:
 ```
 - If you don't specify this field, K8s will add it automatically.
-- The scheduler looks through all the PODs, and looks for those that don't have this property set.
+- The [[07 kube-scheduler|scheduler]] looks through all the PODs, and looks for those that don't have this property set.
 - When it finds them, those are the candidates for scheduling.
-- ![[Pasted image 20250324203039.png]]
+- ![1 Manual Scheduling image 1](Images/Pasted%20image%2020250324203039.png)
 - If there's not scheduler, PODs won't be assigned and will be stuck in a Pending state. To fix this, you can manually set the `nodeName` field to the name of the node you want to schedule the [[10 POD]] on. The POD then gets assigned to the specified node.
 - You can do it only at creation time. 
 - What happens if the POD is already created? K8s won't allow you to modify the property.
@@ -45,7 +45,7 @@ metadata:
 ```
 
 - Send it as a JSON format.
-- **The scheduler runs as a POD in the kube-system namespace.**
+- **The scheduler runs as a POD in the kube-system [[17 Namespaces|namespace]].**
 - 1. Create a binding object that specifies the target node ("node02"):
 
     ```
@@ -85,3 +85,4 @@ metadata:
 
 This binding instructs Kubernetes to assign the existing pod to the specified node without altering its original manifest.
 
+- Compare this manual binding flow with policy-driven placement in [[4 Node Selectors]], [[5 Node Affinity]], and [[12 Multiple Schedulers]].

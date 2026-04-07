@@ -10,6 +10,7 @@ aliases:
 - 3 different workloads running in your cluster, and you'd like to dedicate the data processing workloads that require higher horsepower to the stronger node.
 - In the default setup, and pod can land on any node.
 - We can set a limitation on the POD, so they will run on specific nodes only. The simplest way to do this is to use **node selectors.**
+- This builds directly on the label mechanics introduced in [[2 Labels and Selectors]].
 - Node selectors restrict pod placement by matching key-value pairs defined in the pod’s specification against the labels on the nodes.
 - To ensure that a pod is restricted to run on a specific node, you can modify the pod's definition file using node selectors. Below is an example of a pod definition YAML file that deploys a data processing image exclusively on a node labeled as "Large":
 
@@ -35,3 +36,5 @@ spec:
 **This is fine for simple scenarios, but is limited for more complex scenarios like NOT logic, conditionals, etc. **
 
 For instance, if you need to schedule a pod on a node that is either large or medium, or on any node that is not labeled as small, a basic node selector may not suffice. In these cases, consider using node affinity and anti-affinity features, which offer advanced scheduling capabilities to define more complex placement rules.
+
+- For those more advanced placement rules, continue to [[5 Node Affinity]].

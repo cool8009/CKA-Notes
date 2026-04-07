@@ -10,7 +10,7 @@ tags:
 - If the key is also sent over the network, a potential hacker can sniff the encrypted UN and PW, but also the key itself, and use it to decrypt the data. This is known as **symmetric encryption.**
 - It's secure, but since **it uses the same key on enc and dec, if someone gets access to the key he can access the data.**
 - This is where **asymmetric enc** comes in: 2 different keys, one for sender, one for receiver.
-- ![[Pasted image 20251230221330.png]]
+- ![5 TLS Basics image 1](Images/Pasted%20image%2020251230221330.png)
 - These are **public and private keys, but for the sake of the example, we'll call it a private key, and a public lock**.
 - You can think of these as a private key and a public lock. 
 - The private key remains securely with the owner, while the public lock can be shared openly. 
@@ -49,18 +49,18 @@ tags:
 
 - What if you want to use your "lock" on other servers? Well you can copy your lock into other servers as well.
 - For additional users who require access, they can generate their own key pairs and have their public keys added to the servers.
-- ![[Pasted image 20251230222216.png]]
+- ![5 TLS Basics image 2](Images/Pasted%20image%2020251230222216.png)
 - Back to the web server example.
 - The problem we had with symmetric enc, is that our key to the data had to be sent over the network along with our encrypted data. 
 - **What if we could get the key to the server safely?**
 - Here’s how the process works for a web server using HTTPS:
 1. The server generates a key pair (private and public keys).:
-   ![[Pasted image 20251230222703.png]]
+   ![5 TLS Basics image 3](Images/Pasted%20image%2020251230222703.png)
 2. The user gets the public key from the server upon accessing it via HTTPS. Let's assume a hacker is also sniffing all the traffic, therefore he also gets a copy of the public key:
-   ![[Pasted image 20251230222803.png]]
+   ![5 TLS Basics image 4](Images/Pasted%20image%2020251230222803.png)
 3. The users browser encrypts his symmetric key, using the public key provided by the server. The symmetric key is now secure.
 4. The user then sends his enc. data with the key, to the server. The hacker also gets a copy:
-   ![[Pasted image 20251230222949.png]]
+   ![5 TLS Basics image 5](Images/Pasted%20image%2020251230222949.png)
 5. The server uses its own private key to decrypt the incoming message. The hacker, which only has the private key sniffed from the traffic, can't do anything.
 6. The client and the server can use the symmetric key to encrypt data and send to each other.
 
@@ -119,7 +119,7 @@ Data:
 - Anyone can generate a certificate though. It's a one line command. You need an authoritative figure to be responsible on handing out **trusted certificates**, that are proven to be authentic. Someone who can vouch for a websites legitimacy. 
 - Browsers rely on Certificate Authorities (CAs) to sign and validate certificates. 
 - If the cert is invalid, we get this famous screen:
-  ![[Pasted image 20251230224032.png]]
+  ![5 TLS Basics image 6](Images/Pasted%20image%2020251230224032.png)
 - Renowned CAs, such as Symantec, DigiCert, Komodo, and GlobalSign, use their private keys to sign certificate signing requests (CSRs). 
 - But how does the browser know that "Symantec" who signed my incoming certificate is the real one and not just a hacker with a fake name?
 - The CA's themselves have public and private keys. The public keys of the CA's are built into the browser - therefore they can validate by decrypting the incoming cert.
@@ -151,8 +151,4 @@ Key Points Summary
 
 Regarding file naming conventions, certificates containing public keys typically have extensions such as .crt or .pem (e.g., server.crt, server.pem or client.crt, client.pem), and private key files usually include "key" in the filename or extension (e.g., server.key or server-key.pem).
 
-![The image illustrates public and private keys, showing certificate file types (.crt, .pem) and their roles in encryption.](https://kodekloud.com/kk-media/image/upload/v1752869970/notes-assets/images/CKA-Certification-Course-Certified-Kubernetes-Administrator-TLS-Basics/frame_1160.jpg)
-
-
-
-![[Pasted image 20251230225426.png]]
+![The image illustrates public and private keys, showing certificate file types (.crt, .pem) and their roles in encryption.](https://kodekloud.com/kk-media/image/upload/v1752869970/notes-assets/images/CKA-Certification-Course-Certified-Kubernetes-Administrator-TLS-Basics/frame_1160.jpg) ![5 TLS Basics image 7](Images/Pasted%20image%2020251230225426.png)
